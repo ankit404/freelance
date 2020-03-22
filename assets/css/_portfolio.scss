@@ -1,0 +1,1512 @@
+/*--
+    Elements - Portfolio
+------------------------------------------------------*/
+
+/*Portfolio Filter*/
+.portfolio-filter {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 0 -20px;
+    padding-bottom: 5px;
+
+    @media #{$large-mobile} {
+        margin: 0 -10px;
+    }
+
+    & button,
+    a {
+        font-size: 16px;
+        line-height: 30px;
+
+        position: relative;
+
+        display: inline-flex;
+
+        margin: 0 20px;
+        padding: 0;
+
+        text-transform: uppercase;
+
+        color: $heading-color;
+        border: none;
+        background-color: transparent;
+
+        @media #{$large-mobile} {
+            margin: 0 10px;
+        }
+
+        &::before {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+
+            margin-top: -5px;
+            margin-left: -5px;
+
+            content: "";
+            transition: all 0.4s ease 0s;
+
+            opacity: 0;
+            border-top: 5px solid $color-1;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+        }
+
+        &.active {
+            color: $color-1;
+
+            &::before {
+                margin-top: 0;
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Portfolio Filter 2*/
+.portfolio-filter-2 {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 0 -30px;
+    padding-bottom: 5px;
+
+    @media #{$desktop-device} {
+        margin: 0 -25px;
+    }
+
+    @media #{$tablet-device} {
+        margin: 0 -20px;
+    }
+
+    @media #{$large-mobile} {
+        margin: 0 -10px;
+    }
+
+    & button,
+    a {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 30px;
+
+        position: relative;
+
+        display: inline-flex;
+
+        margin: 0 30px;
+        padding: 0;
+
+        text-transform: capitalize;
+
+        border: 2px solid transparent;
+        background-color: transparent;
+
+        @media #{$desktop-device} {
+            margin: 0 25px;
+        }
+
+        @media #{$tablet-device} {
+            margin: 0 20px;
+        }
+
+        @media #{$large-mobile} {
+            margin: 0 10px;
+        }
+
+        &.active {
+            color: $heading-color;
+            border-bottom-color: $color-1;
+        }
+    }
+}
+
+/*Portfolio 1*/
+.uptimo-portfolio {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            & a {
+                position: relative;
+
+                display: block;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: "";
+                    transition: all 0.35s ease 0s;
+
+                    opacity: 0;
+                    background: linear-gradient(0deg, #343538 50%, rgba(0, 0, 0, 0.3) 100%);
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        & .content {
+            position: absolute;
+            right: 0;
+            bottom: -50px;
+            left: 0;
+
+            padding: 20px;
+
+            transition: all 0.6s ease-in-out;
+
+            opacity: 0;
+
+            & .inner {
+                & .title {
+                    font-weight: 400;
+
+                    margin-bottom: 10px;
+
+                    & a {
+                        color: $white;
+                    }
+                }
+
+                & p {
+                    max-width: 480px;
+                    margin: auto;
+
+                    opacity: 0.8;
+                    color: $white;
+
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+
+                    @media #{$small-mobile} {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+
+                    @media #{$extra-small-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            &.text-center {
+                & p {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+
+            &.text-left {
+                & p {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+
+            &.text-right {
+                & p {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            & .content {
+                bottom: 70px;
+
+                opacity: 1;
+
+                @media #{$laptop-device} {
+                    bottom: 50px;
+                }
+
+                @media #{$desktop-device} {
+                    bottom: 30px;
+                }
+
+                @media #{$tablet-device} {
+                    bottom: 50px;
+                }
+
+                @media #{$large-mobile} {
+                    bottom: 20px;
+                }
+
+                @media #{$small-mobile} {
+                    bottom: 50px;
+                }
+
+                @media #{$extra-small-mobile} {
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 2*/
+.uptimo-portfolio-2 {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            & a {
+                position: relative;
+
+                display: block;
+                overflow: hidden;
+
+                &::before {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: "";
+                    transition: all 0.35s ease 0s;
+
+                    opacity: 0;
+                    background: linear-gradient(0deg, #343538 50%, rgba(0, 0, 0, 0.3) 100%);
+                }
+
+                & img {
+                    width: 100%;
+
+                    transition: all 1s ease;
+                }
+            }
+        }
+
+        & .content {
+            position: absolute;
+            z-index: 9;
+            right: 0;
+            bottom: -50px;
+            left: 0;
+
+            padding: 30px;
+
+            transition: all 0.4s ease;
+
+            opacity: 0;
+
+            & .inner {
+                & .title {
+                    font-weight: 400;
+
+                    margin-bottom: 10px;
+
+                    & a {
+                        color: $white;
+                    }
+                }
+
+                & p {
+                    max-width: 480px;
+                    margin: auto;
+
+                    opacity: 0.8;
+                    color: $white;
+
+                    @media #{$large-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+
+                    @media #{$small-mobile} {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+
+                    @media #{$extra-small-mobile} {
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            &.text-center {
+                & p {
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+            }
+
+            &.text-left {
+                & p {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+
+            &.text-right {
+                & p {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
+        }
+
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+
+                    & img {
+                        transform: scale(1.2) rotate(5deg);
+                    }
+                }
+            }
+
+            & .content {
+                bottom: 0;
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Portfolio 3*/
+.uptimo-portfolio-3 {
+    & .inner {
+        position: relative;
+
+        float: left;
+        overflow: hidden;
+
+        width: 100%;
+
+        & .thumb {
+            position: relative;
+
+            overflow: hidden;
+
+            & a {
+                position: relative;
+
+                display: block;
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .overlay-holder {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 100%;
+
+                display: block;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0.9;
+                background-color: $color-1;
+            }
+        }
+
+        & .content {
+            margin-top: 20px;
+
+            & .inner {
+                & .title {
+                    font-weight: 400;
+
+                    margin-bottom: 8px;
+
+                    & a {
+                    }
+                }
+
+                & span {
+                    font-size: 12px;
+                    line-height: 1.2;
+
+                    display: block;
+
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 4*/
+.uptimo-portfolio-4 {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            position: relative;
+
+            overflow: hidden;
+
+            & a {
+                position: relative;
+
+                display: block;
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            & .overlay-holder {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 100%;
+
+                display: block;
+
+                width: 100%;
+                height: 100%;
+
+                background-color: rgba($color-1, 0.9);
+            }
+        }
+
+        & .content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+
+            background-color: rgba($heading-color, 0.5);
+
+            &.bg-color {
+                background-color: rgba($color-1, 0.9) !important;
+            }
+
+            & .inner {
+                & .title {
+                    font-weight: 400;
+
+                    margin: 0;
+
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 5*/
+.uptimo-portfolio-5 {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            & a {
+                position: relative;
+
+                display: block;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: "";
+                    transition: all 0.35s ease 0s;
+
+                    opacity: 0;
+                    background-color: $heading-color;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        & .content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+
+            transition: all 0.6s ease-in-out;
+            transform: translateY(-50%);
+
+            opacity: 0;
+
+            & .inner {
+                margin-top: 50px;
+
+                transition: all 0.6s ease-in-out;
+
+                & .title {
+                    font-weight: 400;
+
+                    margin-bottom: 0;
+
+                    text-transform: uppercase;
+
+                    & a {
+                        color: $white;
+                    }
+                }
+
+                & .categories {
+                    font-size: 12px;
+
+                    display: block;
+
+                    margin: 0;
+
+                    text-transform: uppercase;
+
+                    color: $white;
+
+                    &::before {
+                        display: block;
+
+                        width: 60px;
+                        margin: 20px auto;
+
+                        content: "";
+
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+            & .content {
+                opacity: 1;
+
+                & .inner {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio 6*/
+.uptimo-portfolio-6 {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            & a {
+                position: relative;
+
+                display: block;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: "";
+                    transition: all 0.35s ease 0s;
+
+                    opacity: 0;
+                    background-color: $heading-color;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+
+        & .content {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            transition: all 0.6s ease-in-out;
+            transform: translateY(100%);
+
+            opacity: 0;
+
+            & .inner {
+                background-color: $color-4;
+
+                & .title {
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+
+                    margin-bottom: 0;
+
+                    text-transform: capitalize;
+
+                    & a {
+                        padding: 20px;
+
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            & .thumb {
+                & a {
+                    &::before {
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+            & .content {
+                transform: translateY(0);
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Portfolio 7*/
+.uptimo-portfolio-7 {
+    & .inner {
+        position: relative;
+
+        overflow: hidden;
+
+        & .thumb {
+            position: relative;
+
+            display: block;
+
+            & img {
+                width: 100%;
+            }
+
+            & .overlay-holder {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+                opacity: 0;
+                border-bottom: 5px solid transparent;
+            }
+        }
+
+        & .content {
+            position: absolute;
+            z-index: 9;
+            top: 100%;
+            left: 0;
+
+            width: 100%;
+
+            transition: all 0.6s ease-in-out;
+            transform: translateY(-50%);
+            text-align: center;
+
+            opacity: 0;
+
+            & h6 {
+                font-size: 14px;
+
+                text-transform: uppercase;
+
+                & a {
+                    color: $white;
+                }
+            }
+        }
+
+        &:hover {
+            & .thumb {
+                & .overlay-holder {
+                    opacity: 1;
+                }
+            }
+
+            & .content {
+                top: 50%;
+
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Portfolio (Parallax)*/
+.uptimo-portfolio-parallax {
+    overflow: hidden;
+
+    padding: 160px 0;
+
+    @media #{$tablet-device} {
+        padding: 100px 0;
+    }
+
+    @media #{$large-mobile} {
+        padding: 100px 0;
+    }
+
+    & .content {
+        & .title {
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            color: $white;
+        }
+
+        & p {
+            max-width: 520px;
+            margin-bottom: 32px;
+
+            color: $white;
+        }
+
+        & .btn {
+        }
+
+        &.text-center {
+            & p {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        &.text-left {
+            & p {
+                margin-right: auto;
+                margin-left: 0;
+            }
+        }
+
+        &.text-right {
+            & p {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+/*Portfolio (Classic)*/
+.uptimo-portfolio-classic {
+    & .inner {
+        overflow: hidden;
+
+        transition: all 0.4s ease 0s;
+
+        & .thumb {
+            & a {
+                position: relative;
+
+                display: block;
+                overflow: hidden;
+
+                &::before {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    content: "";
+                    transition: all 0.5s ease 0s;
+
+                    opacity: 0;
+                    background-color: $heading-color;
+                }
+
+                &::after {
+                    font-family: $fontawesome;
+
+                    position: absolute;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+
+                    margin-top: 50px;
+
+                    content: "\f030";
+                    transition: all 0.5s ease 0s;
+                    transform: translateX(-50%) translateY(-50%);
+
+                    opacity: 0;
+                    color: $white;
+                }
+
+                &:hover {
+                    & img {
+                        transform: scale(1.1);
+                    }
+
+                    &::before {
+                        opacity: 0.8;
+                    }
+
+                    &::after {
+                        margin-top: 0;
+
+                        opacity: 1;
+                    }
+                }
+
+                & img {
+                    width: 100%;
+
+                    transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+                }
+            }
+        }
+
+        & .content {
+            & .title {
+                font-weight: 700;
+
+                margin-bottom: 10px;
+            }
+
+            & .categories {
+                font-size: 12px;
+
+                display: block;
+
+                margin-bottom: 15px;
+
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                color: lighten($heading-color-light, 30);
+            }
+
+            & p {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            & .btn {
+            }
+        }
+    }
+
+    // Dark
+    &.dark {
+        & .inner {
+            background-color: $heading-color-light;
+
+            & .content {
+                padding: 30px;
+
+                & .title {
+                    & a {
+                        color: $white;
+                    }
+                }
+
+                & .categories {
+                    color: $white;
+                }
+
+                & p {
+                    color: $white;
+                }
+            }
+        }
+
+        &:nth-child(2n+1) {
+            & .inner {
+                & .thumb {
+                    order: 2;
+
+                    @media #{$tablet-device} {
+                        order: 1;
+                    }
+
+                    @media #{$large-mobile} {
+                        order: 1;
+                    }
+                }
+
+                & .content {
+                    order: 1;
+
+                    @media #{$tablet-device} {
+                        order: 2;
+                    }
+
+                    @media #{$large-mobile} {
+                        order: 2;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            & .inner {
+                background-color: $color-1;
+
+                & .content {
+                    & .btn {
+                        color: $heading-color;
+                        background-color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Portfolio Details*/
+.portfolio-single {
+    & .portfolio-gallery {
+        & a {
+            display: block;
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    & .content {
+        & .title {
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        & .categories {
+            font-size: 12px;
+
+            display: block;
+
+            margin-bottom: 15px;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            color: lighten($heading-color-light, 30);
+        }
+
+        & p {
+            margin-bottom: 40px;
+
+            @media #{$large-mobile} {
+                margin-bottom: 30px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & .portfolio-meta-data {
+        & li {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin-bottom: 22px;
+
+            @media #{$large-mobile} {
+                margin-bottom: 10px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            & .icon {
+                width: 30px;
+
+                i {
+                    line-height: 28px;
+
+                    color: $heading-color;
+                }
+            }
+
+            & span {
+            }
+        }
+
+        &.inline {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -5px -10px;
+
+            & li {
+                margin: 5px 10px;
+            }
+
+            &.center {
+                justify-content: center;
+            }
+        }
+
+        &.style-2 {
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -10px;
+
+            & li {
+                display: flex;
+                align-items: center;
+                flex: 1 0 calc(100% - 20px);
+                flex-wrap: wrap;
+
+                margin: 10px;
+                padding: 25px;
+
+                border: 1px solid $gray-3;
+
+                @media #{$tablet-device} {
+                    flex: 1 0 calc(50% - 20px);
+                }
+
+                @media #{$large-mobile} {
+                    flex: 1 0 calc(50% - 20px);
+
+                    padding: 20px;
+                }
+
+                @media #{$small-mobile} {
+                    flex: 1 0 calc(100% - 20px);
+
+                    padding: 25px;
+                }
+
+                & .icon {
+                    display: inline-flex;
+
+                    width: 70px;
+
+                    text-align: left;
+
+                    i {
+                        font-size: 50px;
+                        line-height: 1;
+
+                        color: $body-color;
+                    }
+
+                    img {
+                    }
+                }
+
+                & .info {
+                    & span {
+                        line-height: 20px;
+
+                        display: block;
+
+                        color: $heading-color;
+
+                        &:first-child {
+                            color: $body-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.style-3 {
+            & li {
+                & span {
+                    color: $heading-color-light;
+
+                    & span {
+                        margin-right: 5px;
+
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+    }
+
+    & .portfolio-social {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -5px;
+
+        & a {
+            line-height: 1;
+
+            width: 26px;
+            height: 26px;
+            margin: 5px;
+
+            transition: all 0.2s ease;
+            text-align: center;
+
+            opacity: 0.85;
+            color: $white;
+            border-radius: 50%;
+            background-color: transparent;
+
+            & i {
+                font-size: 12px;
+                line-height: 27px;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.facebook {
+                background-color: $facebook;
+            }
+
+            &.twitter {
+                background-color: $twitter;
+            }
+
+            &.linkedin {
+                background-color: $linkedin;
+            }
+
+            &.youtube {
+                background-color: $youtube;
+            }
+
+            &.pinterest {
+                background-color: $pinterest;
+            }
+        }
+    }
+}
+
+/*Portfolio Funfact*/
+.portfolio-funfact {
+    padding: 70px 20px;
+}
+
+/*Portfolio Navigation*/
+.portfolio-nav {
+    display: flex;
+    clear: both;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    background-color: #F7F7F7;
+
+    & li {
+        flex: 1 0 auto;
+
+        & a {
+            display: block;
+
+            padding: 20px;
+
+            text-align: center;
+
+            color: $body-color;
+
+            &:hover {
+                color: inherit;
+                background-color: #EEEEEE;
+            }
+
+            & i {
+                font-size: 30px;
+                line-height: 50px;
+            }
+        }
+    }
+}
+
+
+/*----- Portfolio Split -----*/
+.home-portfolio-split {
+    & .uptimo-fp-section {
+        overflow: hidden;
+
+        @media only screen and (min-width: 992px) {
+            transition: all 0.3s ease-in-out 0s;
+
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+
+        @media #{$tablet-device} {
+            height: auto !important;
+
+            & .fp-tableCell {
+                height: auto !important;
+            }
+        }
+
+        @media #{$large-mobile} {
+            height: auto !important;
+
+            & .fp-tableCell {
+                height: auto !important;
+            }
+        }
+    }
+
+    & #fp-nav {
+        display: none;
+    }
+
+    /*Arrows*/
+    & .uptimo-fp-arrows {
+        position: fixed;
+        z-index: 100;
+        top: 50%;
+        right: 40px;
+
+        transform: translate(0, -50%);
+
+        opacity: 1;
+
+        @media #{$tablet-device} {
+            display: none;
+        }
+
+        @media #{$large-mobile} {
+            display: none;
+        }
+
+        & ul {
+            & li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 32px;
+
+                & i {
+                    font-size: 32px;
+                }
+
+                &.prev,
+                &.next {
+                    cursor: pointer;
+                    transition: all 0.3s ease 0s;
+
+                    &:hover {
+                        color: $heading-color;
+                    }
+                }
+
+                &.num {
+                    font-weight: 700;
+
+                    margin: 17px 0 20px;
+
+                    color: $heading-color;
+
+                    & span {
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Image*/
+.portfolio-fp-image {
+    @media only screen and (min-width: 992px) {
+        transition: all 0.5s ease-in-out 0.3s;
+        transform: translateX(100px);
+
+        opacity: 0;
+    }
+}
+
+/*Content*/
+.portfolio-fp-content {
+    display: flex;
+    align-items: center;
+
+    max-width: 760px;
+    padding: 50px 80px;
+
+    @media only screen and (min-width: 992px) {
+        transition: all 0.5s ease-in-out 0.3s;
+        transform: translateX(-100px);
+
+        opacity: 0;
+    }
+
+    @media #{$desktop-device} {
+        padding: 50px 30px;
+    }
+
+    @media #{$tablet-device} {
+        padding: 50px 30px;
+    }
+
+    @media #{$large-mobile} {
+        padding: 50px 30px;
+    }
+
+    & .inner {
+        & h2 {
+            font-size: 36px;
+
+            margin-bottom: 30px;
+
+            @media #{$large-mobile} {
+                font-size: 26px;
+            }
+
+            @media #{$small-mobile} {
+                font-size: 24px;
+            }
+
+            @media #{$extra-small-mobile} {
+                font-size: 20px;
+            }
+        }
+
+        & p {
+            margin-bottom: 65px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media #{$large-mobile} {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.active {
+    & .portfolio-fp-image,
+    & .portfolio-fp-content {
+        @media only screen and (min-width: 992px) {
+            transition: all 0.5s ease-in-out 0.5s;
+            transform: translateX(0);
+
+            opacity: 1;
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .portfolio-filter {
+            & button,
+            a {
+                &::before {
+                    border-top: 5px solid nth($colorList, $i);
+                }
+
+                &.active {
+                    color: nth($colorList, $i);
+                }
+            }
+        }
+
+        & .portfolio-filter-2 {
+            & button,
+            a {
+                &.active {
+                    border-bottom-color: nth($colorList, $i);
+                }
+            }
+        }
+
+        & .uptimo-portfolio-classic {
+            &.dark {
+                &:hover {
+                    & .inner {
+                        background-color: nth($colorList, $i);
+                    }
+                }
+            }
+        }
+    }
+}

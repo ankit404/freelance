@@ -1,0 +1,87 @@
+/*--
+    Elements - Pricing
+------------------------------------------------------*/
+
+.uptimo-pricing {
+    & .pricing-inner {
+        background-color: $white;
+        padding: 50px 50px 80px;
+        border: 1px solid #dfdbdb;
+        border-radius: 4px;
+        transition: all 0.3s ease 0s;
+        @media #{$desktop-device} {
+            padding: 50px 40px 80px;
+        }
+        @media #{$extra-small-mobile} {
+            padding: 50px 40px 80px;
+        }
+        &:hover {
+            border-color: transparent;
+	        box-shadow: 0 0 60px 0 rgba(41,44,58,.1);
+        }
+        & .pricing-header {
+            position: relative;
+            margin-bottom: 70px;
+            padding-right: 40%;
+            & .title {
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            & .price {
+                font-size: 40px;
+                line-height: 1;
+                display: flex;
+                margin: 0;
+                &::before {
+                    font-size: 20px;
+                    line-height: 1;
+                    content: attr(data-currency);
+                    margin-top: 6px;
+                }
+            }
+            & .icon {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                @media #{$desktop-device} {
+                    right: -15px;
+                }
+                @media #{$extra-small-mobile} {
+                    width: 70px;
+                }
+                & img {}
+            }
+        }
+        & .pricing-body {
+            & ul {
+                & li {
+                    color: $heading-color;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    padding-left: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &::before {
+                        content: "\f111";
+                        font-family: $fontawesome;
+                        font-size: 4px;
+                        position: absolute;
+                        left: 0;
+                        line-height: inherit;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+        & .pricing-footer {
+            margin-top: 45px;
+            & .btn {
+                max-width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+/*--
+    Elements - Case
+------------------------------------------------------*/
+
+/*Case*/
+.case {
+    & .inner {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            opacity: 0;
+            z-index: 2;
+            transition: all 250ms ease-out;
+        }
+        & img {
+            width: 100%;
+            transition: opacity 0.35s, transform 1s;
+        }
+        & p {
+            visibility: hidden;
+            opacity: 0;
+            color: $white;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%) scale(2);
+            padding: 15px;
+            z-index: 5;
+            transition: all 250ms ease-out;
+            width: 100%;
+        }
+        &:hover {
+            &::before {
+                opacity: 0.9;
+            }
+            & img {
+                transform: scale(1.1) rotate(3deg);
+            }
+            & p {
+                transform: translate(0, -50%) scale(1);
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*Case 2*/
+.case-2 {
+    & .inner {
+        & img {}
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 30px;
+            z-index: 9;
+            &::before {
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+                z-index: -1;
+            }
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+                background-color: $heading-color-light;
+                opacity: 0.8;
+                transition: all 0.3s ease 0s;
+                z-index: -1;
+            }
+            & h3 {
+                color: $white;
+                font-family: $font-playfair-display;
+                margin-bottom: 20px;
+            }
+            & .separator {
+                opacity: 0.4;
+                margin-bottom: 20px;
+            }
+            & p {
+                color: $white;
+                font-weight: 300;
+                line-height: 1.5;
+            }
+        }
+        
+        &:hover {
+            & .content {
+                &::before {
+                    opacity: 0.9;
+                }
+                &::after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    @media #{$laptop-device} {
+        & .inner {
+            & .content {
+                padding: 20px;
+                & h3 {
+                    margin-bottom: 15px;
+                }
+                & .separator {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & .content {
+                padding: 20px;
+                & h3 {
+                    margin-bottom: 15px;
+                }
+                & .separator {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & .content {
+                padding: 15px 20px;
+                & h3 {
+                    margin-bottom: 15px;
+                }
+                & .separator {
+                    margin-bottom: 10px;
+                }
+                & p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,463 @@
+/*----------------------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------------------*/
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Merriweather:300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Mr+Dafoe|Nothing+You+Could+Do|Playfair+Display:400,400i,700,700i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i|Roboto+Slab:100,300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body{
+    background-color: $white;
+    font-size: 16px;
+    line-height: 1.75;
+    font-style: normal;
+    font-weight: normal;
+    visibility: visible;
+    font-family: $font-source-sans-pro;
+    color: $body-color;
+    position: relative;
+    // RTL
+    &[data-dir="rtl"] {
+        direction: rtl;
+        text-align: right;
+    }
+    // Home Startup
+    &.home-startup {
+        & h1, h2, h3, h4, h5, h6, .btn, .site-nav {
+            font-family: $font-poppins;
+        }
+    }
+    // Home Creative Green
+    &.home-creative-green {}
+    // Home Business
+    &.home-business {
+        font-family: $font-roboto-condensed;
+        font-size: 18px;
+        & p {
+            font-family: $font-roboto-condensed;
+        }
+        & h1, h2, h3, h4, h5, h6, .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto-condensed;
+        }
+    }
+    // Home Finance
+    &.home-finance {
+        font-family: $font-roboto;
+        & p {
+            font-family: $font-roboto;
+        }
+        & h1, h2, h3, h4, h5, h6, .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto;
+        }
+    }
+    // Home Portfolio Split
+    &.home-portfolio-split {
+        font-family: $font-playfair-display;
+        & p {
+            font-family: $font-playfair-display;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-playfair-display;
+        }
+    }
+    // Home Gym
+    &.home-gym {
+        font-family: $font-roboto;
+        & p, .btn {
+            font-family: $font-roboto;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-montserrat;
+        }
+    }
+    // Home Restaurant
+    &.home-restaurant {
+        font-family: $font-merriweather;
+        & .btn, .site-nav {
+            font-family: $font-playfair-display;
+        }
+        & .sub-menu, .site-mobile-navigation {
+            font-family: $font-merriweather;
+        }
+        & p {
+            font-family: $font-merriweather;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-playfair-display;
+            color: $heading-color-light;
+        }
+    }
+    // Home Handmade Workshop
+    &.home-handmade-workshop {
+        font-family: $font-roboto-slab;
+        & .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto-slab;
+        }
+        & p {
+            font-family: $font-roboto-slab;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-roboto-slab;
+            color: $heading-color-light;
+        }
+    }
+    // Home Health Care
+    &.home-health-care {
+        font-family: $font-merriweather;
+        font-weight: 300;
+        & .header-aside .off-canvas-nav {
+            font-family: $font-merriweather;
+        }
+        & p {
+            font-family: $font-merriweather;
+        }
+        & .btn {
+            font-size: 14px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-weight: 400;
+        }
+    }
+    // Home Fashion
+    &.home-fashion {}
+    // Home Fashion Sidebar
+    &.home-fashion-sidebar {
+        font-family: $font-poppins;
+        & .header-aside .off-canvas-nav {
+            font-family: $font-poppins;
+        }
+        & p {
+            font-family: $font-poppins;
+        }
+        & h1, h2, h3, h4, h5, h6, .btn, .read-more {
+            font-family: $font-playfair-display;
+        }
+    }
+    // Home Bikini Shop
+    &.home-bikini-shop {
+        font-family: $font-roboto;
+        & .site-nav {
+            font-family: $font-roboto-condensed;
+        }
+        & p {
+            font-family: $font-roboto;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-roboto-condensed;
+        }
+    }
+    // Home Architecture
+    &.home-architecture {
+        font-family: $font-roboto-slab;
+        & p {
+            font-family: $font-roboto-slab;
+        }
+        & h1, h2, h3, h4, h5, h6, .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto-slab;
+        }
+    }
+    // Home Construction
+    &.home-construction {
+        font-family: $font-roboto-slab;
+        & .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto-slab;
+        }
+        & p {
+            font-family: $font-roboto-slab;
+            line-height: 30px;
+            font-weight: 300;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-roboto-slab;
+            color: $heading-color-light;
+        }
+        & h1, & .h1 {
+            font-size: 36px;
+            @media #{$large-mobile}{
+                font-size: 32px;
+            }
+            @media #{$small-mobile}{
+                font-size: 30px;
+            }
+            @media #{$extra-small-mobile}{
+                font-size: 24px;
+            }
+        }
+    }
+    // Home Architecture Full Slider
+    &.home-architecture-full-slider {
+        font-family: $font-roboto-slab;
+        & p, .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-roboto-slab;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-roboto-slab;
+        }
+    }
+    // Home Beauty Spa
+    &.home-beauty-spa {
+        font-family: $font-merriweather;
+        & p, .btn, .site-nav, .sub-menu, .site-mobile-navigation {
+            font-family: $font-merriweather;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-merriweather;
+        }
+    }
+    // Home Furniture
+    &.home-furniture {
+        font-family: $font-playfair-display;
+            font-size: 14px;
+            line-height: 30px;
+        & p {
+            font-family: $font-playfair-display;
+        }
+        & h1, h2, h3, h4, h5, h6 {
+            font-family: $font-montserrat;
+        }
+        & .sub-menu, .off-canvas-nav {
+            font-family: $font-playfair-display;
+        }
+    }
+    // Home Fashion Full Screen
+    &.home-fashion-full-screen {}
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & a:hover {
+            color: nth($colorList, $i);
+        }
+        & button:hover {
+            color: nth($colorList, $i);
+        }
+    }
+}
+
+p {
+    font-family: $font-source-sans-pro;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-montserrat;
+    color: $heading-color;
+    font-weight: 400;
+    margin-top: 0;
+    line-height: 1.2;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 400;
+}
+h1, .h1 {
+    font-size: 40px;
+    @media #{$tablet-device}{
+        font-size: 36px;
+    }
+    @media #{$large-mobile}{
+        font-size: 32px;
+    }
+    @media #{$small-mobile}{
+        font-size: 30px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 24px;
+    }
+}
+h2, .h2 {
+    font-size: 30px;
+    @media #{$large-mobile}{
+        font-size: 26px;
+    }
+    @media #{$small-mobile}{
+        font-size: 24px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 20px;
+    }
+}
+h3, .h3 {
+    font-size: 24px;
+    @media #{$large-mobile}{
+        font-size: 22px;
+    }
+    @media #{$small-mobile}{
+        font-size: 20px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 18px;
+    }
+}
+h4, .h4 {
+    font-size: 20px;
+    @media #{$extra-small-mobile}{
+        font-size: 18px;
+    }
+}
+h5, .h5 {
+    font-size: 18px;
+}
+h6, .h6 {
+    font-size: 16px;
+}
+/*Heading Display Size*/
+.display-1 {
+    font-size: 96px;
+    @media #{$desktop-device}{
+        font-size: 88px;
+    }
+    @media #{$tablet-device}{
+        font-size: 72px;
+    }
+    @media #{$large-mobile}{
+        font-size: 56px;
+    }
+    @media #{$small-mobile}{
+        font-size: 45px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 40px;
+    }
+}
+.display-2 {
+    font-size: 88px;
+    @media #{$desktop-device}{
+        font-size: 72px;
+    }
+    @media #{$tablet-device}{
+        font-size: 56px;
+    }
+    @media #{$large-mobile}{
+        font-size: 45px;
+    }
+    @media #{$small-mobile}{
+        font-size: 40px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 36px;
+    }
+}
+.display-3 {
+    font-size: 72px;
+    @media #{$desktop-device}{
+        font-size: 56px;
+    }
+    @media #{$tablet-device}{
+        font-size: 45px;
+    }
+    @media #{$large-mobile}{
+        font-size: 40px;
+    }
+    @media #{$small-mobile}{
+        font-size: 36px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 30px;
+    }
+}
+.display-4 {
+    font-size: 56px;
+    @media #{$desktop-device}{
+        font-size: 45px;
+    }
+    @media #{$tablet-device}{
+        font-size: 36px;
+    }
+    @media #{$large-mobile}{
+        font-size: 32px;
+    }
+    @media #{$small-mobile}{
+        font-size: 30px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 24px;
+    }
+}
+.display-5 {
+    font-size: 45px;
+    @media #{$tablet-device}{
+        font-size: 36px;
+    }
+    @media #{$large-mobile}{
+        font-size: 32px;
+    }
+    @media #{$small-mobile}{
+        font-size: 30px;
+    }
+    @media #{$extra-small-mobile}{
+        font-size: 24px;
+    }
+}
+
+a, button {
+    color: inherit;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+a, button, img, input, span {
+    transition: all 0.3s ease 0s;
+}
+*:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $color-1;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*-- 
+    - Input Placeholder
+------------------------------------------------------*/
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: inherit;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: inherit;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: inherit;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}

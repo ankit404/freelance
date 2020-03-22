@@ -1,0 +1,638 @@
+/*--
+    Elements - Testimonial
+------------------------------------------------------*/
+
+/*-- Testimonial Style 1 --*/
+.uptimo-testimonial {
+    & .inner {
+        background-color: $white;
+        padding: 40px 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 40px 0 rgba(41,44,58,.06);
+        & .content {
+            & p {
+                font-size: 16px;
+                line-height: 28px;
+                color: $heading-color;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    border-bottom: 2px solid #d3d3d3;
+                    padding-top: 30px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+        & .author {
+            & h6 {
+                font-size: 12px;
+                line-height: 21px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            & .ratting {
+                overflow: hidden;
+                position: relative;
+                height: 14px;
+                line-height: 14px;
+                letter-spacing: 4px;
+                font-size: 12px;
+                width: 78px;
+                color: #b5b7c4;
+                display: flex;
+                & span {
+                    color: #ffba4a;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                }
+            }
+        }
+        & .image {
+            margin-top: 35px;
+            margin-bottom: -70px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            & img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 2 --*/
+.uptimo-testimonial-2 {
+    & .inner {
+        text-align: center;
+        & i {
+            font-size: 50px;
+            margin-left: -15px;
+        }
+        & p {
+            color: $heading-color;
+            font-family: $font-playfair-display;
+            font-size: 24px;
+            line-height: 36px;
+            font-style: italic;
+        }
+    }
+}
+.uptimo-testimonial-2-nav {
+    margin-top: 30px;
+    transition: all 0.3s ease 0s;
+    opacity: 0.4;
+    & .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & .image {
+            min-width: 60px;
+            width: 60px;
+            float: left;
+            margin-right: 20px;
+            & img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        & .content {
+            & .title {
+                font-size: 12px;
+                line-height: 16px;
+                text-transform: uppercase;
+                margin: 0 0 8px;
+            }
+            & .role {
+                font-size: 14px;
+                line-height: 18px;
+                font-family: $font-playfair-display;
+                font-style: italic;
+                margin: 0;
+            }
+        }
+    }
+}
+.slick-current {
+    & .uptimo-testimonial-2-nav {
+        opacity: 1;
+    }
+}
+
+/*-- Testimonial Style 3 --*/
+.uptimo-testimonial-3 {
+    & .inner {
+        background-color: $white;
+        padding: 30px;
+        border: 1px solid rgba(#A9AEBD, 0.3);
+        border-radius: 5px;
+        & .content {
+            margin-bottom: 15px;
+            & p {
+                font-size: 18px;
+                line-height: 31px;
+                color: $heading-color;
+                font-style: italic;
+            }
+        }
+        & .author {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            & h6 {
+                font-size: 12px;
+                line-height: 21px;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                position: relative;
+                padding-left: 15px;
+                &::before {
+                    content: "";
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid $heading-color;
+                    height: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 5px;
+                }
+            }
+            & .ratting {
+                overflow: hidden;
+                position: relative;
+                height: 18px;
+                line-height: 18px;
+                letter-spacing: 4px;
+                font-size: 16px;
+                width: 98px;
+                color: #b5b7c4;
+                display: flex;
+                margin-top: 1px;
+                & span {
+                    color: #ffba4a;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 4 --*/
+.uptimo-testimonial-4 {
+    & .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        @media #{$large-mobile} {
+            flex-direction: column;
+        }
+        & .content {
+            background-color: $white;
+            position: relative;
+            padding: 30px 60px;
+            border-radius: 8px;
+            width: 68%;
+            margin-bottom: 50px;
+            @media #{$large-mobile} {
+                width: 100%;
+            }
+            @media #{$extra-small-mobile} {
+                padding-right: 40px;
+            }
+            & i {
+                font-size: 30px;
+                position: absolute;
+                left: 20px;
+                width: 30px;
+                text-align: center;
+                top: 30px;
+                line-height: 40px;
+                color: $color-1;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                border-top: 60px solid #fff;
+                bottom: -50px;
+                left: 0;
+            }
+            & p {
+                font-size: 18px;
+                line-height: 31px;
+                color: lighten($heading-color, 7);
+                margin-bottom: 25px;
+                font-style: italic;
+            }
+            & h6 {
+                font-size: 12px;
+                line-height: 15px;
+                color: lighten($heading-color, 7);
+                text-transform: uppercase;
+                display: inline-flex;
+                flex-wrap: wrap;
+                border-top: 1px solid #dbdce0;
+                padding-top: 19px;
+                margin: 0;
+                & span {
+                    display: inline-flex;
+                    @media #{$extra-small-mobile} {
+                        flex: 1 0 100%;
+                        min-width: 100%;
+                    }
+                    &.title {}
+                    &.roll {
+                        @media #{$extra-small-mobile} {
+                            margin-top: 5px;
+                        }
+                        &::before {
+                            content: "";
+                            display: block;
+                            float: left;
+                            line-height: 14px;
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            margin: 5px 7px;
+                            background-color: $heading-color;
+                            @media #{$extra-small-mobile} {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .image {
+            width: 32%;
+            @media #{$large-mobile} {
+                width: 170px;
+                padding: 0 !important;
+                margin-top: -30px;
+            }
+            & img {
+                width: 100%;
+                @media #{$large-mobile} {
+                    border-radius: 25px !important;
+                }
+            }
+        }
+    }
+    &:nth-child(2n) {
+        & .inner {
+            & .content {
+                &::after {
+                    border-left: 60px solid transparent;
+                    left: auto;
+                    right: 0;
+                    @media #{$large-mobile} {
+                        border-left-width: 50px;
+                        bottom: -40px;
+                    }
+                }
+            }
+            & .image {
+                padding-left: 30px;
+                @media #{$large-mobile} {
+                    margin-left: auto;
+                    margin-right: 20px;
+                }
+                & img {
+                    border-radius: 25px 0 25px 0;
+                }
+            }
+        }
+    }
+    &:nth-child(2n+1) {
+        & .inner {
+            flex-direction: row-reverse;
+            & .content {
+                &::after {
+                    border-right: 60px solid transparent;
+                    @media #{$large-mobile} {
+                        border-right-width: 50px;
+                        bottom: -40px;
+                    }
+                }
+            }
+            & .image {
+                padding-right: 30px;
+                @media #{$large-mobile} {
+                    margin-right: auto;
+                    margin-left: 20px;
+                }
+                & img {
+                    border-radius: 0 25px 0 25px;
+                }
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 5 --*/
+.testimonial5-slider {
+    &.slick-dotted {
+        & .slick-dots {
+            margin-top: 65px
+        }
+    }
+}
+.uptimo-testimonial-5 {
+    & .header {
+        background-color: transparent !important;
+        & .image {
+            & img {
+                margin: auto;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                margin-bottom: 33px;
+            }
+        }
+        & .title {
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 15px;
+        }
+        & .role {
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: capitalize;
+            color: #8a8c98;
+            margin-bottom: 18px;
+        }
+    }
+    & .content {
+        &::before {
+            content: "";
+            display: block;
+            border-style: solid;
+            border-width: 7px 7px 0;
+            border-color: $color-1 transparent transparent transparent;
+            width: 0;
+            height: 0;
+            margin: 0 auto 15px;
+        }
+        &  p {
+            font-size: 24px;
+            line-height: 36px;
+            color: $white;
+            font-family: $font-playfair-display;
+            font-style: italic;
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .content {
+                &::before {
+                    border-color: nth($colorList, $i) transparent transparent transparent;
+                }
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 6 --*/
+.uptimo-testimonial-6 {
+    & .inner {
+        display: flex;
+        & .image {
+            min-width: 60px;
+            margin-top: 10px;
+            & img {}
+        }
+        & .content {
+            padding-left: 40px;
+            & p {
+                font-style: italic;
+                color: $heading-color;
+                margin-bottom: 20px;
+            }
+            & h6 {
+                font-size: 12px;
+                letter-spacing: 2px;
+                display: flex;
+                flex-wrap: wrap;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin: 0 0 -5px;
+                & span {
+                    margin-bottom: 5px;
+                    &::after{
+                        content: "\f111";
+                        font-family: $fontawesome;
+                        font-size: 5px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        margin: 0 5px;
+                        font-weight: normal;
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+                @media #{$extra-small-mobile} {
+                    display: block;
+                    & span {
+                        display: block;
+                        &::before {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+            & .ratting {
+                overflow: hidden;
+                position: relative;
+                height: 14px;
+                line-height: 14px;
+                letter-spacing: 4px;
+                font-size: 12px;
+                width: 78px;
+                color: #b5b7c4;
+                display: flex;
+                & span {
+                    color: #ffba4a;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                }
+            }
+        }
+        @media #{$extra-small-mobile} {
+            & .content {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 7 --*/
+.uptimo-testimonial-7-quote-icon {
+    width: 74px;
+    height: 74px;
+    color: $heading-color-light;
+    margin: auto;
+    border-radius: 50%;
+    line-height: 74px;
+    font-size: 36px;
+    display: block;
+    transform: rotate(180deg);
+    margin-bottom: 35px;
+}
+.uptimo-testimonial-7 {
+    & .inner {
+        text-align: center;
+        & .content {
+            & p {
+                font-size: 30px;
+                line-height: 1.35;
+                font-weight: 300;
+                color: $white;
+                margin-bottom: 40px;
+            }
+            & h5 {
+                color: $white;
+                margin-bottom: 3px;
+            }
+            & span {
+                font-size: 14px;
+                line-height: 1;
+                color: $white;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 8 --*/
+.uptimo-testimonial-8 {
+    & .inner {
+        background-color: $white;
+        padding: 40px;
+        & .content {
+            & p {
+                font-size: 16px;
+                line-height: 28px;
+                margin-bottom: 25px;
+                position: relative;
+                z-index: 1;
+                & i {
+                    color: $color-1;
+                    font-size: 40px;
+                    position: absolute;
+                    top: -10px;
+                    line-height: 1;
+                    z-index: -1;
+                }
+            }
+            & h6 {
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 700;
+                margin: 0;
+            }
+            & .role {
+                font-size: 17px;
+                line-height: 1;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+/*-- Testimonial Style 9 --*/
+.uptimo-testimonial-9 {
+    & .inner {
+        text-align: center;
+        & .content {
+            & p {
+                font-size: 18px;
+                line-height: 31px;
+                color: $heading-color;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 40px;
+                    border-bottom: 2px solid #d3d3d3;
+                    padding-top: 20px;
+                    margin-bottom: 30px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+        & .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & .avatar {
+                width: 60px;
+                flex: 0 0 60px;
+                margin-right: 20px;
+                & img {
+                    max-width: 100%;
+                }
+            }
+            & .title {
+                & h6 {
+                    font-size: 12px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+                & .ratting {
+                    overflow: hidden;
+                    position: relative;
+                    height: 14px;
+                    line-height: 14px;
+                    letter-spacing: 4px;
+                    font-size: 12px;
+                    width: 78px;
+                    color: #b5b7c4;
+                    display: flex;
+                    & span {
+                        color: #ffba4a;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        overflow: hidden;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .uptimo-testimonial-5 {
+            & .content {
+                &::before {
+                    border-color: nth($colorList, $i) transparent transparent transparent;
+                }
+            }
+        }
+    }
+}

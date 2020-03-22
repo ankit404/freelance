@@ -1,0 +1,62 @@
+/*--
+    Elements - List
+------------------------------------------------------*/
+
+/*List*/
+.list {
+    list-style: outside;
+    padding-left: 20px;
+    margin: 0;
+    &.list-circle {
+        list-style: circle;
+    }
+    &.list-square {
+        list-style: square;
+    }
+    &.list-decimal {
+        list-style: decimal;
+    }
+    &.list-double-digit {
+        list-style: decimal-leading-zero;
+        padding-left: 25px;
+    }
+    &.list-lower-alpha {
+        list-style: lower-alpha;
+    }
+    &.list-upper-alpha {
+        list-style: upper-alpha;
+    }
+    &.list-lower-roman {
+        list-style: lower-roman;
+        padding-left: 25px;
+    }
+    &.list-upper-roman {
+        list-style: upper-roman;
+        padding-left: 25px;
+    }
+    &.list-icon {
+        list-style: none;
+        padding-left: 0;
+        & li {
+            position: relative;
+            padding-left: 25px;
+            & i {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    & li {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            width: 16px;
+            color: inherit;
+            text-align: center;
+            line-height: inherit;
+        }
+    }
+}

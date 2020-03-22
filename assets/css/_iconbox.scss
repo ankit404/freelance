@@ -1,0 +1,1017 @@
+/*--
+    Elements - Icon Box
+------------------------------------------------------*/
+
+/*-- Icon Box 1 --*/
+.uptimo-icon-box {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        max-width: 300px;
+        margin: auto;
+        // Box Icon Wrap
+        & .icon-wrap {
+            display: flex;
+            width: 128px;
+            height: 128px;
+            border: 1px solid #efefef;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 35px;
+            // Box Icon
+            & .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: $color-1;
+                color: $white;
+                margin: auto;
+                & i {
+                    font-size: 26px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h4 {}
+            & p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+/*-- Icon Box 2 --*/
+.uptimo-icon-box-2 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        max-width: 350px;
+        margin: auto;
+        // Box Icon Wrap
+        & .icon-wrap {
+            margin-bottom: 40px;
+            // Box Icon
+            & .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-image: $gradient-1;
+                color: $white;
+                margin: auto;
+                & i {
+                    font-size: 56px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h4 {}
+            & p {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/*-- Icon Box 3 --*/
+.uptimo-icon-box-3 {
+    // Icon Box Inner
+    & .inner {
+        padding: 50px 80px 40px 40px;
+        background-color: $white;
+        transition: all 0.3s ease-in-out;
+        text-align: left;
+        overflow: hidden;
+        position: relative;
+        // Responsive
+        @media #{$tablet-device} {
+            padding-right: 70px;
+        }
+        @media #{$extra-small-mobile} {
+            padding: 40px 60px 30px 31px;
+        }
+        // Box Icon Wrap
+        & .icon-wrap {
+            position: absolute;
+            left: 100%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            margin-left: -15px;
+            // Box Icon
+            & .icon {
+                display: flex;
+                background-image: $gradient-1;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0.85;
+                & i {
+                    font-size: 120px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h4 {
+                letter-spacing: 2px;
+            }
+            & p {
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            & a {
+                display: inline-flex;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 700;
+                color: $body-color;
+                text-transform: uppercase;
+                border-top: 1px solid;
+                border-color: $body-color;
+                padding-top: 5px;
+                margin-top: 35px;
+            }
+        }
+        // Hover
+        &:hover {
+            box-shadow: 0px 0px 40px 0px rgba(41, 44, 58, 0.06);
+            // Box Link
+            & .content {
+                & a {
+                    color: $heading-color;
+                    border-color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 4 --*/
+.uptimo-icon-box-4 {
+    // Icon Box Inner
+    & .inner {
+        // Box Icon Wrap
+        & .icon-wrap {
+            display: flex;
+            align-items: center;
+            // Box Icon
+            & .icon {
+                margin-right: 30px;
+                display: flex;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                flex: 0 0 70px;
+                border-radius: 50%;
+                background-color: $color-6;
+                color: $heading-color;
+                justify-content: center;
+                & i {
+                    font-size: 30px;
+                }
+            }
+        }
+        // Box Heading
+        & .heading {
+            & h4 {}
+        }
+        // Box Description
+        & .content {
+            max-width: 450px;
+            margin: 15px auto auto;
+            & p {}
+        }
+    }
+}
+
+/*-- Icon Box 5 --*/
+.uptimo-icon-box-5 {
+    padding: 50px 40px;
+    @media #{$tablet-device} {
+        padding: 30px 40px;
+    }
+    @media #{$large-mobile} {
+        padding: 20px 15px;
+    }
+    // Icon Box Inner
+    & .inner {
+        // Box Icon Wrap
+        & .icon-wrap {
+            float: left;
+            // Responsive
+            @media #{$extra-small-mobile} {
+                float: none;
+                margin-bottom: 20px;
+            }
+            // Box Icon
+            & .icon {
+                margin-right: 40px;
+                @media #{$extra-small-mobile} {
+                    margin-right: 0;
+                }
+                & img {}
+                & i {
+                    color: $color-1;
+                    text-align: center;
+                    display: block;
+                    width: 80px;
+                    font-size: 70px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            overflow: hidden;
+            max-width: 350px;
+            & h3 {
+                margin: 0;
+            }
+            & p {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/*-- Icon Box 6 --*/
+.uptimo-icon-box-6 {
+    &::before {
+        position: absolute;
+        right: 0;
+        top: 54px;
+        transform: translateX(50%);
+        color: $white;
+        content: "\72";
+        font-family: $optima;
+        font-size: 40px;
+        line-height: 1;
+    }
+    &:last-child {
+        &::before {
+            display: none;
+        }
+    }
+    @media #{$desktop-device} {
+        &:nth-child(2n) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        &:nth-child(2n) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        &:nth-child(2n) {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        &::before {
+            display: none;
+        }
+    }
+    // Icon Box Inner
+    & .inner {
+        max-width: 320px;
+        margin: auto;
+        text-align: center;
+        // Box Icon Wrap
+        & .icon-wrap {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            // Box Icon
+            & .icon {
+                display: inline-flex;
+                & img {}
+                & i {
+                    display: block;
+                    width: 148px;
+                    height: 148px;
+                    border-radius: 50%;
+                    border: 5px solid rgba($white, 0.3);
+                    line-height: 138px;
+                    font-size: 60px;
+                    color: $white;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h3 {
+                color: $white;
+            }
+            & p {
+                padding-top: 15px;
+                color: rgba($white, 0.8);
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($gradientList) {
+        &.gradient-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            &::before {
+                                background-image: nth($gradientList, $i);
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 7 --*/
+.uptimo-icon-box-7 {
+    // Icon Box Inner
+    & .inner {
+        // Box Icon Wrap
+        & .icon-wrap {
+            display: flex;
+            align-items: center;
+            // Box Icon
+            & .icon {
+                width: 100%;
+                max-width: 130px;
+                margin-right: 30px;
+                @media #{$tablet-device} {
+                    max-width: 80px;
+                    margin-right: 20px;
+                }
+                @media #{$extra-small-mobile} {
+                    max-width: 80px;
+                    margin-right: 20px;
+                }
+                & img {}
+                & i {
+                    font-size: 90px;
+                    @media #{$tablet-device} {
+                        font-size: 60px;
+                    }
+                    @media #{$extra-small-mobile} {
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            & h2 {}
+            & p {
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & .icon-wrap {
+                & .heading {
+                    & h2 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 8 --*/
+.uptimo-icon-box-8 {
+    // Icon Box Inner
+    & .inner {
+        // Box Icon Wrap
+        & .icon-wrap {
+            float: left;
+            // Box Icon
+            & .icon {
+                margin-right: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: $color-6;
+                color: $heading-color;
+                & i {
+                    font-size: 24px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            overflow: hidden;
+            & h5 {
+                font-weight: 600;
+            }
+            & p {
+                margin-top: 15px;
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.color-6, &.color-7 {
+        & .inner {
+            & .icon-wrap {
+                & .icon {
+                    & i {
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($gradientList) {
+        &.gradient-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-image: nth($gradientList, $i);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 9 --*/
+.uptimo-icon-box-9 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        // Box Icon Wrap
+        & .icon-wrap {
+            // Box Icon
+            & .icon {
+                margin-bottom: 25px;
+                justify-content: center;
+                & img {}
+                & i {
+                    font-size: 80px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            margin: auto;
+            & h6 {}
+            & p {
+                padding-top: 10px;
+                line-height: 30px;
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($gradientList) {
+        &.gradient-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-image: nth($gradientList, $i);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 10 --*/
+.uptimo-icon-box-10 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        background-color: rgba($heading-color, 0.9);
+        padding: 35px 30px;
+        margin-top: 40px;
+        overflow: visible;
+        // Box Icon Wrap
+        & .icon-wrap {
+            // Box Icon
+            & .icon {
+                margin-bottom: 35px;
+                margin-top: -75px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-7;
+                color: $heading-color;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                & i {
+                    font-size: 32px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            margin: auto;
+            & h6 {
+                color: $white;
+            }
+            & p {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 30px;
+                margin-bottom: 0;
+                color: $white;
+                opacity: 0.6;
+            }
+            & a {
+                margin-top: 30px;
+                display: inline-flex;
+                font-size: 12px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $white;
+                border-color: $white;
+                opacity: 0.6;
+                text-transform: uppercase;
+                border-top: 1px solid;
+                padding-top: 2px;
+                &:hover {
+                    opacity: 1;
+                    border-color: $color-7;
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-color: nth($colorList, $i);
+                            color: $white;
+                        }
+                    }
+                }
+                & .content {
+                    & a {
+                        &:hover {
+                            border-color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.color-6, &.color-7 {
+        & .inner {
+            & .icon-wrap {
+                & .icon {
+                    & i {
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($gradientList) {
+        &.gradient-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-image: nth($gradientList, $i);
+                            color: $white;
+                        }
+                    }
+                }
+                & .content {
+                    & a {
+                        border: transparent;
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $body-color;
+                        }
+                        &:hover {
+                            border-color: transparent;
+                            &::before {
+                                background-image: nth($gradientList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box 11 --*/
+.uptimo-icon-box-11 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        // Box Icon Wrap
+        & .icon-wrap {
+            // Box Icon
+            & .icon {
+                margin-bottom: 25px;
+                justify-content: center;
+                & img {}
+                & i {
+                    color: $color-2;
+                    font-size: 75px;
+                    line-height: 90px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            margin: auto;
+            & h3 {}
+            & p {
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-size: 16px;
+                line-height: 30px;
+            }
+            & a {
+                margin-top: 20px;
+                display: inline-flex;
+                font-size: 12px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $heading-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($gradientList) {
+        &.gradient-#{$i} {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        & i {
+                            background-image: nth($gradientList, $i);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Icon Box --*/
+.uptimo-icon-box-12 {
+    // Icon Box Inner
+    & .inner {
+        background-color: $white;
+        text-align: center;
+        padding: 60px 40px 100px;
+        position: relative;
+        // Box Icon Wrap
+        & .icon-wrap {
+            // Box Icon
+            & .icon {
+                display: block;
+                margin-bottom: 35px;
+                justify-content: center;
+                & img {}
+            }
+        }
+        // Box Content
+        & .content {
+            max-width: 450px;
+            margin: auto;
+            & h6 {
+                margin: 0;
+            }
+            & p {
+                line-height: 30px;
+            }
+        }
+        &:hover {
+            & .btn {
+                background-color: $color-1 !important;
+            }
+        }
+        & .btn {
+            background-color: #9d9d9d;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/*-- Icon Box --*/
+.uptimo-icon-box-13 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        max-width: 350px;
+        margin: auto;
+        // Box Icon Wrap
+        & .icon-wrap {
+            margin-bottom: 30px;
+            // Box Icon
+            & .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: $color-1;
+                color: $white;
+                margin: auto;
+                & i {
+                    font-size: 44px;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h4 {}
+            & p {
+                font-weight: 400;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/*-- Icon Box --*/
+.uptimo-icon-box-14 {
+    // Icon Box Inner
+    & .inner {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 75px 50px 80px;
+        border-bottom: 3px solid transparent;
+        transition: all 250ms ease-out;
+        height: 100%;
+        // Box Icon Wrap
+        & .icon-wrap {
+            width: 75px;
+            flex: 1 0 75px;
+            // Box Icon
+            & .icon {
+                & img {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            padding-left: 40px;
+            flex: 1 0 calc(100% - 75px);
+            & h4 {}
+            & p {
+                font-weight: 400;
+                margin-top: 15px;
+            }
+            & .read-more {
+                color: inherit;
+                font-size: 12px;
+                margin-top: 35px;
+                letter-spacing: 1px;
+                font-weight: 700;
+                display: inline-block;
+                border-top: 1px solid rgba(103,108,127,.2);
+                padding-top: 3px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &:hover {
+        & .inner {
+            border-bottom-color: $color-1;
+            background-color: $white;
+            box-shadow: 0 0 68px 0 rgba(132,127,165,.32);
+            & .icon-wrap {
+                & .icon {
+                    & img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+            & .content {
+                & .read-more {
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+    
+    @media #{$laptop-device} {
+        & .inner {
+            padding: 50px 20px;
+        }
+    }
+    @media #{$desktop-device} {
+        & .inner {
+            padding: 60px 30px;
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            padding: 50px 20px;
+        }
+    }
+    @media #{$large-mobile} {
+        & .inner {
+            padding: 60px 30px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            padding: 50px 20px;
+            & .icon-wrap {
+                width: 60px;
+                flex: 1 0 60px;
+            }
+            & .content {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+/*-- Icon Box --*/
+.uptimo-icon-box-15 {
+    // Icon Box Inner
+    & .inner {
+        text-align: center;
+        // Box Icon Wrap
+        & .icon-wrap {
+            // Box Icon
+            & .icon {
+                padding: 80px 30px;
+                background-color: #f7f7f7;
+                border-radius: 20px;
+                margin-bottom: 40px;
+                color: $color-1;
+                transition: all 250ms ease-out;
+                & i {
+                    font-size: 160px;
+                    line-height: 1;
+                }
+            }
+        }
+        // Box Content
+        & .content {
+            & h5 {
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+    }
+    &:hover {
+        & .inner {
+            & .icon-wrap {
+                & .icon {
+                    background-color: $color-1;
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+    @media #{$laptop-device} {
+    }
+    @media #{$desktop-device} {
+    }
+    @media #{$tablet-device} {
+    }
+    @media #{$large-mobile} {
+    }
+    @media #{$extra-small-mobile} {
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .uptimo-icon-box-12 {
+            & .inner {
+                &:hover {
+                    & .btn {
+                        background-color: nth($colorList, $i) !important;
+                    }
+                }
+            }
+        }
+        & .uptimo-icon-box-14 {
+            &:hover {
+                & .inner {
+                    border-bottom-color: nth($colorList, $i);
+                }
+            }
+        }
+        & .uptimo-icon-box-15 {
+            & .inner {
+                & .icon-wrap {
+                    & .icon {
+                        color: nth($colorList, $i);
+                    }
+                }
+            }
+            &:hover {
+                & .inner {
+                    & .icon-wrap {
+                        & .icon {
+                            background-color: nth($colorList, $i);
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

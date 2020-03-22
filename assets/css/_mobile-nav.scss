@@ -1,0 +1,258 @@
+/*--
+    Site Mobile Navigation
+------------------------------------------*/
+.site-mobile-navigation {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+}
+/*Site Mobile Nav*/
+.site-mobile-nav {
+    margin-right: 0 !important;
+    max-width: none;
+    
+    // Mobile Menu Toggle Button
+    & .dl-trigger {
+        position: absolute;
+        right: 0;
+        top: -60px;
+        @media #{$large-mobile} {
+            top: -50px;
+        }
+    }
+    // Mobile Menu Toggle Hamburger
+    & .hamburger {
+        display: block;
+        cursor: pointer;
+        transition: all 0.15s linear;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible;
+        padding: 0;
+        width: auto;
+        height: auto;
+        &.dl-active, &:hover, &:focus {
+            background-color: transparent;
+        }
+        &::after {
+            display: none;
+        }
+        & .hamburger-box {
+            width: 26px;
+            height: 20px;
+            display: block;
+            position: relative;
+            & .hamburger-inner {
+                display: block;
+                top: 50%;
+                margin-top: -2px;
+                &,
+                &::before,
+                &::after {
+                    width: 26px;
+                    height: 2px;
+                    background-color: $heading-color;
+                    border-radius: 4px;;
+                    position: absolute;
+                }
+                &::before,
+                &::after {
+                    content: "";
+                    display: block;
+                }
+                &::before {
+                    top: -8px;
+                }
+                &::after {
+                    bottom: -8px;
+                }
+            }
+        }
+        &:hover {
+            & .hamburger-box {
+                & .hamburger-inner {
+                    background-color: $color-1;
+                    &,
+                    &::before,
+                    &::after {
+                        background-color: $color-1;
+                    }
+                }
+            }
+        }
+    }
+    & .hamburger--spin .hamburger-inner {
+        transition-duration: 0.22s;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19), background 0.3s ease 0s;; 
+    }
+    & .hamburger--spin .hamburger-inner::before {
+        transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in, background 0.3s ease 0s;;
+    }
+    & .hamburger--spin .hamburger-inner::after {
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), background 0.3s ease 0s;;
+    }
+
+    & .hamburger--spin.dl-active .hamburger-inner {
+        transform: rotate(225deg);
+        transition-delay: 0.12s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1), background 0.3s ease 0s;;
+    }
+    & .hamburger--spin.dl-active .hamburger-inner::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out, background 0.3s ease 0s;;
+    }
+    & .hamburger--spin.dl-active .hamburger-inner::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), background 0.3s ease 0s;;
+    }
+    
+    // Mobile Dl or Multilevel Menu
+    & .dl-menu {
+        background-color: $white;
+        overflow: hidden;
+        box-shadow: 0 2px 12px 2px rgba($black, 0.1);
+        margin: 0;
+        list-style: none;
+        & li {
+            border-bottom: 1px solid #eeeeee;
+            &:last-child {
+                border-bottom: none;
+            }
+            & > a {
+                color: $heading-color;
+                display: block;
+                position: relative;
+                padding: 10px 25px;
+                line-height: 30px;
+                font-weight: 400;
+                &:not(:only-child)::after {
+                    font-family: $fontawesome;
+                    content: "\f105";
+                    font-size: 18px;
+                    color: $heading-color;
+                    right: 25px;
+                }
+            }
+            &:hover {
+                & > a {
+                    color: $white;
+                    background-color: $color-1;
+                    &::after {
+                        color: $white;
+                    }
+                }
+            }
+            & .dl-submenu {
+                background-color: transparent !important;
+                & li {
+                    &.dl-back {
+                        & a {
+                            background-color: transparent;
+                            text-align: right;
+                            color: $heading-color;
+                            z-index: 3;
+                            position: relative;
+                            &::after {
+                                font-family: $fontawesome;
+                                content: "\f177";
+                                left: 25px;
+                                color: $heading-color;
+                                z-index: -1;
+                                position: absolute;
+                                top: 0;
+                                line-height: 50px;
+                                width: auto;
+                                right: auto;
+                            }
+                        }
+                        &:hover {
+                            & a {
+                                color: $white;
+                                background-color: $color-1;
+                                &::after {
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .dl-submenu {
+        background-color: $white !important;
+        top: 0 !important;
+    }
+}
+/*Header Dark*/
+.header-dark {
+    & .site-mobile-nav {
+        & .hamburger {
+            & .hamburger-box {
+                & .hamburger-inner {
+                    &,
+                    &::before,
+                    &::after {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header Dark*/
+.header-2 {
+    & .site-mobile-nav {
+        & .dl-trigger {
+            top: -64px;
+            @media #{$large-mobile} {
+                top: -50px;
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .site-mobile-nav {
+            & .hamburger {
+                &:hover {
+                    & .hamburger-box {
+                        & .hamburger-inner {
+                            background-color: nth($colorList, $i);
+                            &,
+                            &::before,
+                            &::after {
+                                background-color: nth($colorList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+            & .dl-menu {
+                & li {
+                    &:hover {
+                        & > a {
+                            background-color: nth($colorList, $i);
+                        }
+                    }
+                    & .dl-submenu {
+                        & li {
+                            &.dl-back {
+                                &:hover {
+                                    & a {
+                                        background-color: nth($colorList, $i);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+/*----------------------------------------*/
+/*  02. Header CSS
+/*----------------------------------------*/
+.header {
+    z-index: 999;
+
+    width: 100%;
+
+    @media #{$tablet-device} {
+        position: static;
+
+        background-color: $white !important;
+    }
+
+    @media #{$large-mobile} {
+        position: static;
+
+        background-color: $white !important;
+    }
+}
+
+/*Header Transparent*/
+.header-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: transparent;
+
+    @media #{$tablet-device} {
+        position: static;
+    }
+
+    @media #{$large-mobile} {
+        position: static;
+    }
+
+    // Toggle Buttons
+    & .header-toggle-buttons {
+        & [class*="header-toggle"] {
+            & > a {
+                color: $white;
+
+                @media #{$tablet-device} {
+                    color: $heading-color;
+                }
+
+                @media #{$large-mobile} {
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+/*Header Mobile Sticky*/
+.header-mobile-sticky {
+    @media #{$tablet-device} {
+        position: absolute;
+    }
+
+    @media #{$large-mobile} {
+        position: absolute;
+    }
+}
+
+/*Header Fullwidth*/
+.header-fullwidth {
+    & .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/*Fullpage JS Header*/
+.header-half {
+    position: absolute;
+    top: 0;
+
+    width: 50%;
+    padding: 0 65px;
+
+    background-color: transparent;
+
+    &.header-left {
+        right: auto;
+        left: 0;
+    }
+
+    &.header-right {
+        right: auto;
+        left: 50%;
+    }
+
+    @media #{$laptop-device} {
+        padding: 0 15px;
+    }
+
+    @media #{$desktop-device} {
+        padding: 0 15px;
+    }
+
+    @media #{$tablet-device} {
+        position: static;
+        left: 0;
+
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    @media #{$large-mobile} {
+        position: static;
+        left: 0;
+
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    & .header-logo {
+        line-height: 100px;
+    }
+
+    & .header-bottom-right {
+        padding: 30px 0;
+    }
+}
+
+/*Header Aside*/
+.header-aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow: auto;
+
+    width: 380px;
+    height: 100%;
+
+    background-color: #F7F7F7;
+
+    & .inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        min-height: 100%;
+        padding: 80px 40px;
+    }
+
+    @media #{$laptop-device} {
+        width: 320px;
+
+        & .inner {
+            padding: 60px 30px;
+        }
+    }
+}
+
+@import "header/middle";
+@import "header/bottom";

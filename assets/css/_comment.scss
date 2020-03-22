@@ -1,0 +1,83 @@
+/*--
+    Elements - Comment
+------------------------------------------------------*/
+
+/*Comment List Wrap*/
+.comment-list-wrap {}
+
+/*Comment Title*/
+.comment-title {}
+
+/*Comment List*/
+.comment-list {
+    margin-bottom: -30px;
+    & ul.children {
+        margin-left: 100px;
+        @media #{$small-mobile} {
+            margin-left: 0;
+        }
+    }
+}
+
+/*Comment*/
+.comment {
+    margin-bottom: 30px;
+}
+
+/*Comment Avatar*/
+.comment-avatar {
+    float: left;
+    width: 100px;
+    @media #{$small-mobile} {
+        float: none;
+        margin-bottom: 15px;
+    }
+    & img {
+        width: 70px;
+        height: auto;
+    }
+}
+
+/*Comment Description*/
+.comment-desc {
+    border: 1px solid $gray-2;
+    padding: 20px 30px;
+    overflow: hidden;
+    & .rattings {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        & i {}
+    }
+    & .text {
+        & p {}
+    }
+    & .meta {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        & li {
+            font-size: 14px;
+            line-height: 24px;
+            color: $heading-color;
+            & i {
+                margin-right: 5px;
+            }
+            & a {}
+            &.comment-author {
+                text-transform: uppercase;
+            }
+            &.comment-date {
+                margin-right: auto;
+                color: $body-color;
+                &::before {
+                    content: "-";
+                    padding: 0 5px;
+                }
+            }
+            &.comment-reply {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

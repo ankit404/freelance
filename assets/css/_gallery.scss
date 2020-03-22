@@ -1,0 +1,48 @@
+/*--
+    Elements - Gallery
+------------------------------------------------------*/
+
+/*Gallery*/
+.gallery {
+    display: block;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: $heading-color-light;
+        opacity: 0.3;
+        z-index: 2;
+        transition: all 0.3s ease 0s;
+    }
+    & img {
+        width: 100%;
+    }
+    &:hover {
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+
+/*Bikini Shop Gallery*/
+.bikini-shop-gallery {
+    display: flex;
+    justify-content: center;
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        justify-content: center;
+        & li {
+            padding: 10px;
+            flex: 1 0 33.3333%;
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}

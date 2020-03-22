@@ -1,0 +1,34 @@
+/*--
+    Elements - Dropcap
+------------------------------------------------------*/
+
+.dropcap {
+    display: block;
+    float: left;
+    font-size: 60px;
+    color: $heading-color;
+    line-height: 50px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    // Dropcap Style 2
+    &.box {
+        width: 50px;
+        height: 50px;
+        background-color: $heading-color;
+        color: $white;
+        font-size: 30px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: 5px;
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            color: nth($colorList, $i);
+            &.box {
+                background-color: nth($colorList, $i);
+                color: $white;
+            }
+        }
+    }
+}

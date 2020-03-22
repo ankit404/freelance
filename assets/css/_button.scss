@@ -1,0 +1,463 @@
+/*--
+    Elements - Buttons
+------------------------------------------------------*/
+
+/*Button Group*/
+.button-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -10px;
+    & .btn {
+        margin: 10px;
+    }
+}
+
+/*Button*/ 
+.btn {
+    background-color: $heading-color;
+    color: $white;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    padding: 9px 50px;
+    line-height: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: $font-montserrat;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    white-space: normal;
+    &:hover {
+        border-color: transparent;
+        background-color: $color-1;
+        color: $white !important;
+    }
+    &.btn-hover-outline {
+        &:hover {
+            background-color: transparent;
+            border-color: $color-1;
+            color: $color-1;
+        }
+    }
+    
+    // Button With Icon
+    &[class*="btn-icon-"] {
+        padding: 9px 30px;
+        & i {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 0px;
+        }
+    
+        // Size
+        &.btn-xs {
+            padding: 2px 15px;
+        }
+        &.btn-sm {
+            padding: 5px 20px;
+        }
+        &.btn-md {
+            padding: 7px 25px;
+        }
+        &.btn-lg {
+            padding: 14px 40px;
+            & i {
+                font-size: 18px;
+            }
+        }
+        &.btn-xl {
+            padding: 19px 50px;
+            & i {
+                font-size: 20px;
+            }
+        }
+    }
+    &.btn-icon-left {
+        & i {
+            order: 0;
+            margin-right: 10px;
+        }
+    }
+    &.btn-icon-right {
+        & i {
+            order: 12;
+            margin-left: 10px;
+        }
+    }
+    
+    // Shape Style
+    &.btn-round {
+        border-radius: 4px;
+    }
+    &.btn-circle {
+        border-radius: 100px;
+    }
+    
+    // Size
+    &.btn-xs {
+        font-size: 10px;
+        padding: 2px 15px;
+    }
+    &.btn-sm {
+        font-size: 11px;
+        padding: 5px 20px;
+    }
+    &.btn-md {
+        padding: 7px 35px;
+    }
+    &.btn-lg {
+        padding: 14px 65px;
+        font-size: 14px;
+    }
+    &.btn-xl {
+        padding: 19px 80px;
+        font-size: 15px;
+    }
+    
+    // Button Outline & Link Style
+    &.btn-outline {
+        color: $heading-color;
+        border-color: $heading-color;
+        background-color: transparent;
+        &:hover {
+            border-color: transparent;
+            background-color: $color-1;
+            color: $white;
+        }
+    }
+    &.btn-text {
+        padding: 3px 0;
+        line-height: 1;
+        width: auto;
+        border-color: transparent;
+        background-color: transparent;
+        color: initial;
+        position: relative;
+        color: $heading-color !important;
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background-color: $heading-color;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            &::before {
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+    
+    // Color
+    
+    // This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+    &.btn-color {
+        background-color: $color-1;
+        color: $white;
+    }
+    &.btn-color-outline {
+        color: $color-1;
+        border-color: $color-1;
+        &:hover {
+            background-color: $color-1;
+            color: $white;
+        }
+    }
+    &.btn-color-text {
+        color: $color-1 !important;
+        &::before {
+            background-color: $color-1;
+        }
+    }
+    
+    // Classes for button Fixed color & hover color
+    
+    // Button Fixed White Color classes
+    &.btn-white {
+        background-color: $white;
+        color: $heading-color;
+    }
+    &.btn-white-outline {
+        color: $white;
+        border-color: $white;
+        &:hover {
+            background-color: $white;
+            color: $heading-color;
+        }
+    }
+    &.btn-white-text {
+        color: $white !important;
+        &::before {
+            background-color: $white;
+        }
+    }
+    
+    // Button Fixed Gray Color classes
+    &.btn-gray {
+        background-color: $gray-3;
+        color: $heading-color;
+    }
+    &.btn-gray-outline {
+        color: $heading-color;
+        border-color: $gray-3;
+        &:hover {
+            background-color: $gray-3;
+            color: $heading-color;
+        }
+    }
+    &.btn-gray-text {
+        color: $gray-3 !important;
+        &::before {
+            background-color: $gray-3;
+        }
+    }
+
+    // Button Fixed Color classes
+    @for $i from 1 through length($colorList) {
+        &.btn-color-#{$i} {
+            background-color: nth($colorList, $i);
+            color: $white;
+        }
+        &.btn-color-#{$i}-outline {
+            color: nth($colorList, $i);
+            border-color: nth($colorList, $i);
+            &:hover {
+                background-color: nth($colorList, $i);
+            }
+        }
+        &.btn-color-#{$i}-text {
+            color: nth($colorList, $i) !important;
+            &::before {
+                background-color: nth($colorList, $i);
+            }
+        }
+    }
+
+    // Button Fixed Gradient Style + Hover Color Classes
+    @for $i from 1 through length($btnGradientList) {
+        &.btn-gradient-#{$i} {
+            background-color: transparent;
+            border-color: transparent;
+            background-image: nth($btnGradientList, $i);
+            color: $white;
+            background-size: 200% auto;
+            &:hover {
+                background-position: right center;
+            }
+        }
+    }
+    
+    
+    // Button Fixed Hover Color classes
+    // This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+    &.btn-hover-color {
+        &:hover {
+            background-color: $color-1;
+            color: $white;
+        }
+    }
+    &.btn-hover-color-outline {
+        &:hover {
+            color: $color-1;
+            border-color: $color-1;
+            background-color: transparent;
+        }
+    }
+    
+    // Button Fixed Hover Dark Color classes
+    &.btn-hover-dark {
+        &:hover {
+            color: $white !important;
+            background-color: $heading-color !important;
+        }
+    }
+    &.btn-hover-dark-outline {
+        &:hover {
+            color: $heading-color !important;
+            border-color: $heading-color !important;
+            background-color: transparent !important;
+        }
+    }
+    
+    // Button Fixed Hover White Color classes
+    &.btn-hover-white {
+        &:hover {
+            background-color: $white !important;
+            color: $heading-color !important;
+        }
+    }
+    &.btn-hover-white-outline {
+        &:hover {
+            color: $white !important;
+            border-color: $white !important;
+            background-color: transparent !important;
+        }
+    }
+    
+    // Button Fixed Gray Color classes
+    &.btn-hover-gray {
+        &:hover {
+            background-color: $gray-3 !important;
+            color: $heading-color !important;
+        }
+    }
+    &.btn-hover-gray-outline {
+        &:hover {
+            color: $heading-color !important;
+            border-color: $gray-3 !important;
+            background-color: transparent !important;
+        }
+    }
+
+    // Button Fixed Color classes
+    @for $i from 1 through length($colorList) {
+        &.btn-hover-color-#{$i} {
+            &:hover {
+                border-color: transparent;
+                background-color: nth($colorList, $i) !important;
+                color: $white !important;
+            }
+        }
+        &.btn-hover-color-#{$i}-outline {
+            &:hover {
+                color: nth($colorList, $i) !important;
+                border-color: nth($colorList, $i) !important;
+                background-color: transparent !important;
+            }
+        }
+    }
+
+    // Font Size With Heading Class
+    &.h1, & .h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+        @media #{$tablet-device}{
+            font-size: 30px;
+        }
+        @media #{$large-mobile}{
+            font-size: 24px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+        }
+        @media #{$extra-small-mobile}{
+            font-size: 18px;
+        }
+    }
+    &.h2, & .h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+        @media #{$large-mobile}{
+            font-size: 26px;
+        }
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+        @media #{$extra-small-mobile}{
+            font-size: 20px;
+        }
+    }
+    &.h3, & .h3 {
+        font-size: 24px;
+        margin-bottom: 0;
+        @media #{$large-mobile}{
+            font-size: 22px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+        }
+        @media #{$extra-small-mobile}{
+            font-size: 18px;
+        }
+    }
+    &.h4, & .h4 {
+        font-size: 20px;
+        margin-bottom: 0;
+        @media #{$extra-small-mobile}{
+            font-size: 18px;
+        }
+    }
+    &.h5, & .h5 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    &.h6, & .h6 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .btn {
+            &:not(.btn-text) {
+                &:hover {
+                    border-color: transparent;
+                    background-color: nth($colorList, $i);
+                    color: $white;
+                }
+                &.btn-hover-outline {
+                    &:hover {
+                        background-color: transparent;
+                        color: nth($colorList, $i);
+                        border-color: nth($colorList, $i);
+                    }
+                }
+            }
+            // Default
+            &.btn-color {
+                background-color: nth($colorList, $i);
+                color: $white;
+            }
+            &.btn-color-outline {
+                color: nth($colorList, $i);
+                border-color: nth($colorList, $i);
+                &:hover {
+                    background-color: nth($colorList, $i);
+                    color: $white;
+                }
+            }
+            &.btn-color-text {
+                color: nth($colorList, $i);
+                &::before {
+                    background-color: nth($colorList, $i);
+                }
+            }
+            // Hover
+            &.btn-hover-color {
+                &:hover {
+                    background-color: nth($colorList, $i);
+                    color: $white;
+                }
+            }
+            &.btn-hover-color-outline {
+                &:hover {
+                    color: nth($colorList, $i);
+                    border-color: nth($colorList, $i);
+                    background-color: transparent;
+                }
+            }
+            &.btn-hover-color-text {
+                &:hover {
+                    color: nth($colorList, $i) !important;
+                    &::before {
+                        background-color: nth($colorList, $i);
+                    }
+                }
+            }
+        }
+    }
+}

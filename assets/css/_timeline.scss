@@ -1,0 +1,92 @@
+/*--
+    Elements - Timeline
+------------------------------------------------------*/
+
+/*Timeline Slider*/
+.timeline-slider {
+    padding: 0 65px;
+    @media #{$extra-small-mobile} {
+        padding: 0 30px;
+    }
+    & .slick-list {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -1px;
+            height: 2px;
+            background-color: #e6e6e6;
+            width: 100%;
+        }
+        @media #{$small-mobile} {
+            &::before {
+                top: auto;
+                bottom: 7px;
+                margin-top: 0;
+            }
+        }
+    }
+    & .slick-slide {
+        display: block !important;
+        @media #{$small-mobile} {
+            margin: 0 !important;
+        }
+        &:nth-child(2n+1) {
+            & .timeline-block {
+                & .dot {
+                    top: auto;
+                    bottom: -7.5px;
+                }
+            }
+        }
+    }
+}
+
+/*Timeline Block*/
+.timeline-block {
+    max-width: 330px;
+    width: 100%;
+    padding: 40px 15px;
+    float: left;
+    position: relative;
+    max-width: 330px;
+    display: block !important;
+    @media #{$small-mobile} {
+        max-width: 260px;
+    }
+    & .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: -7.5px;
+        @media #{$small-mobile} {
+            top: auto;
+            bottom: 0 !important;
+        }
+    }
+    & .timeline-content {
+        & .title {
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 16px;
+            margin-bottom: 10px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 70px;
+                height: 1px;
+                background-color: rgba(#A9AEBD, 0.3);
+            }
+        }
+        & .desc {
+            & p {}
+        }
+    }
+}
