@@ -1,2 +1,2 @@
-# freelance
-a landing page for freelanceMantra
+# freelanceit
+a landing page for freelanceit
