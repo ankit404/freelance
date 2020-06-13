@@ -1,0 +1,77 @@
+/*--
+    Elements - Skills
+------------------------------------------------------*/
+
+/*Skill*/
+.skill {
+    height: 5px;
+    position: relative;
+    background-color: $gray-1;
+    display: block;
+    width: 100%;
+    clear: both;
+    float: left;
+    margin-top: 26px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    & h6 {
+        display: flex;
+        font-size: 12px;
+        font-weight: 400;
+        color: $body-color;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -26px;
+        
+        & .units {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition:  left 1s linear 0s, opacity 0.3s linear;
+            transform: translateX(-50%);
+        }
+    }
+    & .bar {
+        height: 100%;
+        width: 0;
+        background-color: $heading-color;
+        opacity: 0;
+        transition:  width 1s linear 0s, opacity 0.3s linear;
+    }
+}
+
+/*Home Construction Skill*/
+.home-construction {
+    & .skill {
+        margin-top: 35px;
+        height: 7px;
+        & h6 {
+            font-size: 16px;
+            font-weight: 300;
+            top: -35px;
+        }
+    }
+}
+
+/*Pie Chart*/
+.pie-chart {
+    display: inline-flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    position: relative;
+    & .percent {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    & canvas {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}

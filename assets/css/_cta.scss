@@ -1,0 +1,214 @@
+/*--
+    Elements - CTA
+------------------------------------------------------*/
+
+/*CTA BG*/
+.cta-bg {
+    min-height: 450px;
+    position: relative;
+    @media #{$large-mobile} {
+        min-height: 350px;
+    }
+    &.position {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        &.left {
+            left: 0;
+            right: auto;
+        }
+        &.right {
+            right: 0;
+            left: auto;
+        }
+    }
+    &.static-xs {
+        @media #{$large-mobile} {
+            position: static;
+        }
+    }
+    &.static-sm {
+        @media #{$tablet-device} {
+            position: static;
+        }
+        @media #{$large-mobile} {
+            position: static;
+        }
+    }
+    &.static-md {
+        @media #{$desktop-device} {
+            position: static;
+        }
+        @media #{$tablet-device} {
+            position: static;
+        }
+        @media #{$large-mobile} {
+            position: static;
+        }
+    }
+    &.static-lg {
+        @media #{$laptop-device} {
+            position: static;
+        }
+        @media #{$desktop-device} {
+            position: static;
+        }
+        @media #{$tablet-device} {
+            position: static;
+        }
+        @media #{$large-mobile} {
+            position: static;
+        }
+    }
+}
+
+/*Creative Green Promo Content*/
+.creative-green-promo-content {
+    & img {
+        @media #{$large-mobile} {
+            width: 300px;
+        }
+        @media #{$small-mobile} {
+            width: 250px;
+        }
+        @media #{$extra-small-mobile} {
+            width: 200px;
+        }
+    }
+    & h1 {
+        font-family: $font-playfair-display;
+        font-size: 80px;
+        font-style: italic;
+        line-height: 1;
+        font-weight: $font-weight-600;
+        color: $white;
+        margin-bottom: 26px;
+        @media #{$large-mobile} {
+            font-size: 60px;
+        }
+        @media #{$small-mobile} {
+            font-size: 50px;
+        }
+        @media #{$extra-small-mobile} {
+            font-size: 40px;
+        }
+    }
+    & h5 {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    & .btn {}
+}
+
+/*Health Care CTA*/
+.health-care-cta {
+    min-height: 100vh;
+}
+/*Health Care CTA Content*/
+.health-care-cta-content {
+    & .inner {
+        max-width: 955px;
+        margin: auto;
+        & .content {
+            padding: 30px 90px;
+            border: 1px solid $white;
+            padding-bottom: 0;
+            border-bottom: none;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 55px;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 50px;
+                height: 1px;
+                background-color: $white;
+            }
+            &::before {
+                left: 0;
+                right: auto;
+            }
+            &::after {
+                right: 0;
+                left: auto;
+            }
+            & h1 {
+                font-size: 100px;
+                color: $white;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            & p {
+                color: $white;
+                font-weight: 300;
+                margin-bottom: -5px;
+                padding: 0 15px;
+            }
+        }
+        & .btn {}
+    }
+    @media #{$desktop-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 86px;
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & .content {
+                padding: 30px 50px 0;
+                & h1 {
+                    font-size: 70px;
+                }
+                & p {
+                    padding: 0 30px;
+                }
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        & .inner {
+            & .content {
+                padding: 30px 50px 0;
+                & h1 {
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .inner {
+            & .content {
+                padding: 30px 30px 15px;
+                & h1 {
+                    font-size: 40px;
+                }
+                & p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & .content {
+                padding: 20px 20px 15px;
+                & h1 {
+                    font-size: 30px;
+                }
+                & p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

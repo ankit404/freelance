@@ -1,0 +1,1225 @@
+/*----------------------------------------------------*/
+/*  05. Pages Style (Home & Other Inner Page Content Style)
+/*----------------------------------------------------*/
+
+/*----- Freelancer -----*/
+
+/*Hero*/
+.freelancer-hero {
+    height: 800px;
+    @media #{$laptop-device} {
+        height: 600px;
+    }
+    @media #{$desktop-device} {
+        height: 500px;
+    }
+    @media #{$tablet-device} {
+        height: 500px;
+    }
+    @media #{$large-mobile} {
+        height: 300px;
+    }
+}
+/*About*/
+.freelancer-about {
+    margin-top: -163px;
+    z-index: 9;
+    & .avatar {
+        max-width: 326px;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    & .title {
+        font-size: 65px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    & .role {
+        font-size: 14px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    & .quote {
+        line-height: 1.5;
+        font-style: italic;
+        color: $heading-color-light;
+        font-family: $font-playfair-display;
+        margin-bottom: 30px;
+    }
+    & .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        & li {
+            margin: 0 20px 10px;
+            & i {
+                margin-right: 15px;
+            }
+            & span {}
+        }
+    }
+    & .social {
+        & a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: $heading-color-light;
+            color: $white;
+            text-align: center;
+            & i {
+                font-size: 14px;
+                line-height: 30px;
+            }
+            &:hover {
+                background-color: $color-1;
+                color: $white;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        margin-top: -130px;
+        & .avatar {
+            max-width: 260px;
+        }
+        & .title {
+            font-size: 56px;
+        }
+    }
+    @media #{$large-mobile} {
+        margin-top: -100px;
+        & .avatar {
+            max-width: 200px;
+        }
+        & .title {
+            font-size: 50px;
+        }
+    }
+    @media #{$small-mobile} {
+        & .title {
+            font-size: 36px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .title {
+            font-size: 30px;
+        }
+    }
+}
+/*Experience*/
+.experience {
+    display: flex;
+    justify-content: center;
+    & .inner {
+        & .content {
+            max-width: 380px;
+            padding-left: 50px;
+            position: relative;
+            & .dot {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            & h4 {
+                color: $white;
+                font-weight: 700;
+                margin-bottom: 22px;
+            }
+            & h6 {
+                color: $white;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 23px;
+            }
+            & p {
+                color: $white;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+/*----- Handmade Workshop -----*/
+
+/*About*/
+.handmade-workshop-about {
+    & h2 {}
+    & p {
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        @media #{$tablet-device} {
+            margin-bottom: 40px;
+        }
+        @media #{$large-mobile} {
+            margin-bottom: 30px;
+        }
+    }
+    & .btn {
+        font-size: 14px;
+        background-color: $body-color;
+    }
+}
+
+/*----- Beauty Spa -----*/
+
+/*About*/
+.beauty-spa-about {
+    & h1 {
+        margin-bottom: 10px;
+    }
+    & img {
+        margin-bottom: 20px;
+    }
+    & p {
+        line-height: 36px;
+    }
+    & h6 {
+        display: inline-block;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 1;
+        color: $heading-color-light;
+        padding: 0 20px;
+        position: relative;
+        margin: 30px 0 0;
+        &::before, &::after {
+            position: absolute;
+            top: 50%;
+            content: "";
+            background-color: #c2c2c3;
+            height: 1px;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+        &::before {
+            right: 100%;
+            left: auto;
+        }
+        &::after {
+            left: 100%;
+            right: auto;
+        }
+    }
+}
+
+/*----- GYM -----*/
+
+/*Gym Feature Section*/
+.gym-feature-section {
+    padding: 70px 0 60px;
+    border-top: 1px solid rgba($white, 0.1);
+    margin-top: -223px;
+    @media #{$desktop-device} {
+        padding: 55px 0 45px;
+    }
+}
+/*Gym Feature*/
+.gym-feature {
+    & .inner {
+        display: flex;
+        & .icon {
+            margin-right: 30px;
+            & i {
+                font-size: 60px;
+            }
+        }
+        & .content {
+            & h5 {
+                color: $white;
+                font-weight: 800;
+            }
+            & p {
+                color: $white;
+                opacity: 0.8;
+                line-height: 31px;
+            }
+        }
+    }
+}
+
+/*----- Restaurant -----*/
+
+/*About*/
+.ribbon-callnow {
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: $color-1;
+    text-align: center;
+    color: $white;
+    font-size: 50px;
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0 40px;
+    height: 90px;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        border-top: 45px solid $color-1;
+        border-bottom: 45px solid $color-1;
+        top:0
+    }
+    &::before{
+        border-left: 40px solid transparent;
+        left: -40px;
+    }
+    &::after{
+        border-right: 40px solid transparent;
+        right: -40px;
+    }
+    & .callnow-label {
+        font-family: $font-mrDafoe;
+        font-weight: 100;
+        font-size: 80%;
+        display: inline-block;
+    }
+    & .callnow-phone {
+        display: inline-block;
+    }
+    @media #{$tablet-device} {
+        font-size: 40px;
+        height: 70px;
+        width: auto;
+        display: inline-block;
+        &::before, &::after {
+            border-width: 35px 30px !important;
+        }
+        &::before{
+            left: -30px;
+        }
+        &::after{
+            right: -30px;
+        }
+    }
+    @media #{$large-mobile} {
+        font-size: 30px;
+        height: 54px;
+        width: auto;
+        display: inline-block;
+        &::before, &::after {
+            border-width: 27px 20px !important;
+        }
+        &::before{
+            left: -20px;
+        }
+        &::after{
+            right: -20px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        font-size: 20px;
+        height: 36px;
+        &::before, &::after {
+            border-width: 18px 15px !important;
+        }
+        &::before{
+            left: -15px;
+        }
+        &::after{
+            right: -15px;
+        }
+    }
+}
+/*Seafood Sale*/
+.seafood-sale-content {
+    max-width: 470px;
+    width: 100%;
+    & > h2 {
+        color: $white !important;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        @media #{$desktop-device} {
+            font-size: 50px;
+        }
+        @media #{$small-mobile} {
+            font-size: 50px;
+        }
+        @media #{$extra-small-mobile} {
+            font-size: 36px;
+        }
+    }
+    & > h1 {
+        font-family: $font-mrDafoe !important;
+        color: $white !important;
+        font-size: 110px;
+        line-height: 1;
+        @media #{$desktop-device} {
+            font-size: 90px;
+        }
+        @media #{$small-mobile} {
+            font-size: 90px;
+        }
+        @media #{$extra-small-mobile} {
+            font-size: 70px;
+        }
+    }
+    & .restaurant-countdown {
+        margin-top: 20px;
+        margin-bottom: -30px;
+        display: flex;
+        flex-wrap: wrap;
+        & .single {
+            width: 25%;
+            margin-bottom: 30px;
+            & h1 {
+                color: $white;
+                font-size: 36px;
+                font-family: $font-merriweather !important;
+            }
+            & p {
+                font-style: italic;
+                font-family: $font-playfair-display !important;
+            }
+        }
+    }
+    & .btn {
+        margin-top: 40px;
+    }
+}
+
+/*----- About Pages -----*/
+
+/*About Me*/
+.about-me-bg {
+    background-position: top center;
+    min-height: 450px;
+    @media #{$large-mobile} {
+        min-height: 350px;
+    }
+    @media #{$extra-small-mobile} {
+        min-height: 300px;
+    }
+}
+.about-me-content {
+    max-width: 750px;
+    padding: 12% 10%;
+}
+/*About Us*/
+.about-us-content {
+    & h1 {
+        font-size: 45px;
+        & span {
+            font-size: 55px;
+        }
+        @media #{$large-mobile} {
+            font-size: 36px;
+            & span {
+                font-size: 45px;
+            }
+        }
+        @media #{$small-mobile} {
+            font-size: 30px;
+            & span {
+                font-size: 36px;
+            }
+        }
+    }
+    & p {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*----- Corporate Blue -----*/
+
+/*About Image*/
+.corporate-blue-about-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+/*----- Creative Agency -----*/
+
+/*FAQ*/
+.faq-wrap-1 {
+    max-width: 570px;
+    @media #{$tablet-device} {
+        max-width: none;
+    }
+    @media #{$large-mobile} {
+        max-width: none;
+    }
+}
+/*Video*/
+.video-btn {
+    width: 60px;
+    height: 60px;
+    padding: 15px 19px 15px 26px;
+    border-radius: 50%;
+    line-height: 27px;
+    & svg {
+        fill: transparent;
+        stroke: $white;
+        stroke-width: 3px;
+    }
+}
+/*Map*/
+.crative-agency-map {
+    min-height: 300px;
+    height: 100%;
+}
+
+/*----- Creative Light -----*/
+
+/*About Parallax*/
+.creative-light-about-parallax {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-size: 130%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: calc( 100% + 200px);
+    z-index: -1;
+}
+/*Portfolio*/
+.creative-light.view-all-portfolio {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $heading-color;
+    padding: 50px 20px;
+        @media #{$large-mobile} {
+            padding: 40px 20px;
+        }
+        @media #{$small-mobile} {
+            padding: 30px 20px;
+        }
+        @media #{$extra-small-mobile} {
+            padding: 20px;
+        }
+}
+
+/*----- Business -----*/
+
+/*About*/
+.business-about-section {
+    background-position: right -100px center;
+    background-size: auto;
+    @media #{$desktop-device} {
+        background-image: none !important;
+    }
+    @media #{$tablet-device} {
+        background-image: none !important;
+    }
+    @media #{$large-mobile} {
+        background-image: none !important;
+    }
+}
+
+/*----- Start Up -----*/
+
+/*About*/
+.startup-about {
+    &.uptimo-section-title {
+        & .section-title-inner {
+            & h1 {
+                max-width: 580px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 45px;
+                @media #{$large-mobile} {
+                    font-size: 36px;
+                    margin-top: -8px;
+                }
+                @media #{$small-mobile} {
+                    font-size: 32px;
+                    margin-top: -8px;
+                }
+                @media #{$extra-small-mobile} {
+                    font-size: 28px;
+                    margin-top: -7px;
+                }
+            }
+            & .separator {
+                width: 90px;
+                background-color: $heading-color;
+                height: 1px;
+            }
+            & p {
+                max-width: 770px;
+            }
+        }
+    }
+}
+
+/*----- Portfolio Gallery -----*/
+
+/*Hero*/
+.portfolio-gallery-hero-content {
+    & h1 {
+        font-family: $font-playfair-display;
+        margin-bottom: 30px;
+    }
+    & p {
+        font-family: $font-playfair-display;
+    }
+}
+
+/*----- Construction -----*/
+
+/*Fullpage*/
+.construction-fullpage {
+    & .iScrollLoneScrollbar {
+        display: none;
+    }
+}
+
+/*Contruction Funfact & Fullpage Nav*/
+.home-construction {
+    & .funfact {
+        & .title {
+            font-size: 14px;
+        }
+    }
+    & #fp-nav {
+        & ul {
+            & li {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/*Contruction Fullpage Content*/
+.construction-fp-content {
+    & > .inner {
+        padding: 200px 80px 100px 80px;
+        @media #{$laptop-device} {
+            padding: 130px 30px 50px 30px;
+        }
+        @media #{$desktop-device} {
+            padding: 130px 30px 50px 30px;
+        }
+        @media #{$tablet-device} {
+            padding: 50px 30px;
+        }
+        @media #{$large-mobile} {
+            padding: 50px 30px;
+        }
+    }
+}
+
+/*About*/
+.construction-about {
+    & .inner {
+        max-width: 830px;
+    }
+}
+/*About Image Content*/
+.construction-about-image-content {
+    padding: 50px;
+    margin-left: 10%;
+    max-width: 500px;
+    background-color: rgba($heading-color, 0.9);
+    @media #{$small-mobile} {
+        padding: 30px;
+        margin: 0;
+    }
+    & p {
+        margin: 0;
+        color: $white;
+    }
+    & .separator {}
+    & h6 {
+        color: $white !important;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+/*Testimonial*/
+.construction-testimonial {
+    & .inner {
+        max-width: 770px;
+    }
+}
+
+/*----- Coming Soon -----*/
+
+/*Coming Soon Wrap*/
+.coming-soon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 150px 0 100px;
+    @media #{$large-mobile} {
+        padding: 70px 0;
+    }
+    @media #{$extra-small-mobile} {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    & .inner {
+        width: 100%;
+        & .coming-soon-content {
+            padding: 50px 70px;
+            border: 1px solid $white;
+            padding-bottom: 0;
+            border-bottom: none;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 70px;
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 50px;
+                height: 1px;
+                background-color: $white;
+            }
+            &::before {
+                left: 0;
+                right: auto;
+            }
+            &::after {
+                right: 0;
+                left: auto;
+            }
+            & h1 {
+                color: $white;
+                font-size: 70px;
+                font-weight: 700;
+                margin-bottom: 26px;
+            }
+            & p {
+                font-size: 18px;
+                line-height: 30px;
+                font-weight: 300;
+                color: $white;
+                max-width: 620px;
+                margin: auto;
+                margin-bottom: -35px;
+            }
+            @media #{$desktop-device} {
+                & h1 {
+                    font-size: 65px;
+                }
+            }
+            @media #{$tablet-device} {
+                & h1 {
+                    font-size: 55px;
+                }
+            }
+            @media #{$large-mobile} {
+                & h1 {
+                    font-size: 40px;
+                }
+            }
+            @media #{$small-mobile} {
+                padding: 30px 40px 0;
+                &::before, &::after {
+                    width: 30px;
+                }
+                & h1 {
+                    font-size: 30px;
+                }
+                & p {
+                    font-size: 16px;
+                    line-height: 28px;
+                    margin-bottom: -45px;
+                }
+            }
+            @media #{$extra-small-mobile} {
+                padding: 30px;
+                margin-bottom: 40px;
+                &::before, &::after {
+                    width: 50px;
+                }
+                & h1 {
+                    font-size: 30px;
+                }
+                & p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        & .coming-soon-content-2 {
+            margin-bottom: 40px;
+            & h1 {
+                font-size: 150px;
+                line-height: 0.75;
+                color: $white;
+                font-family: $font-playfair-display;
+                font-weight: 800;
+                padding-bottom: 35px;
+                margin-bottom: 0;
+            }
+            @media #{$tablet-device} {
+                & h1 {
+                    font-size: 130px;
+                    padding-bottom: 30px;
+                }
+            }
+            @media #{$large-mobile} {
+                & h1 {
+                    font-size: 100px;
+                    padding-bottom: 25px;
+                }
+            }
+            @media #{$small-mobile} {
+                & h1 {
+                    font-size: 80px;
+                    padding-bottom: 20px;
+                }
+            }
+            @media #{$extra-small-mobile} {
+                & h1 {
+                    font-size: 60px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+/*Business Countdown*/
+.business-countdown {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 20px;
+    & .single {
+        flex: 1 0 auto;
+        margin-bottom: 30px;
+        & h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: $white;
+        }
+        & p {
+            color: $white;
+            font-size: 18px;
+            line-height: 1;
+            font-family: $font-playfair-display;
+            margin: 0;
+            text-transform: capitalize;
+        }
+    }
+    @media #{$small-mobile} {
+        & .single {
+            & h1 {
+                font-size: 40px;
+            }
+            & p {
+                font-size: 16px;
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .single {
+            & h1 {
+                font-size: 30px;
+            }
+            & p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+/*Modern Countdown*/
+.modern-countdown {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    & .single {
+        flex: 1 0 auto;
+        margin-bottom: 20px;
+        & h1 {
+            font-size: 36px;
+            color: $white;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        & p {
+            color: $white;
+            line-height: 1;
+            margin: 0;
+            text-transform: capitalize;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .single {
+            & h1 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+/*Coming Soon Subscribe*/
+.coming-soon-subscribe {
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    & form {
+        position: relative;
+        border-bottom: 1px solid rgba($white, 0.5);
+        & input[type="email"] {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            width: 100%;
+            line-height: 30px;
+            padding: 10px 100px 10px 0;
+            margin: 0;
+            color: $white;
+            font-style: italic;
+        }
+        & input[type="submit"], button {
+            border: none;
+            margin: 0;
+            width: auto;
+            padding: 0;
+            line-height: 30px;
+            background-color: transparent;
+            color: $white;
+            font-weight: 700;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            letter-spacing: 1px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+    & .mailchimp-alerts-2 {
+        & .mailchimp-submitting {
+            color: $white;
+        }
+        & .mailchimp-success {
+            color: #008000;
+        }
+        & .mailchimp-error {
+            color: #ff0000;
+        }
+    }
+}
+
+/*----- 404 -----*/
+
+.error-404-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 770px;
+    margin: auto;
+    min-height: 100vh;
+    padding: 150px 0 100px;
+    @media #{$large-mobile} {
+        padding: 70px 0;
+    }
+    @media #{$extra-small-mobile} {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    & .inner {
+        padding-bottom: 0;
+        display: inline-block;
+        position: relative;
+        & h1 {
+            color: $white;
+            font-size: 70px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        & p {
+            font-family: $font-playfair-display;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 300;
+            color: $white;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+        @media #{$desktop-device} {
+            & h1 {
+                font-size: 65px;
+            }
+        }
+        @media #{$tablet-device} {
+            & h1 {
+                font-size: 55px;
+            }
+        }
+        @media #{$large-mobile} {
+            & h1 {
+                font-size: 40px;
+            }
+        }
+        @media #{$small-mobile} {
+            & h1 {
+                font-size: 30px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        @media #{$extra-small-mobile} {
+            & h1 {
+                font-size: 30px;
+            }
+            & p {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/*----- Contact -----*/
+
+/*Contact Wrap*/
+.contact-wrap {
+    max-width: 640px;
+    width: 100%;
+    padding-left: 70px;
+    @media #{$laptop-device} {
+        padding: 0 30px;
+    }
+    @media #{$desktop-device} {
+        padding: 0 30px;
+    }
+    @media #{$tablet-device} {
+        max-width: none;
+        padding: 0 30px;
+    }
+    @media #{$large-mobile} {
+        max-width: none;
+        padding: 0 30px;
+    }
+}
+/*Contact Wrap 3*/
+.contact-wrap-3 {
+    max-width: 870px;
+    width: 100%;
+    padding-left: 100px;
+    @media #{$laptop-device} {
+        padding: 0 30px;
+    }
+    @media #{$desktop-device} {
+        padding: 0 30px;
+    }
+    @media #{$tablet-device} {
+        max-width: none;
+        padding: 0 30px;
+    }
+    @media #{$large-mobile} {
+        max-width: none;
+        padding: 0 30px;
+    }
+}
+/*Contact Map*/
+.contact-map {
+    height: 100%;
+    min-height: 280px;
+}
+/*Contact Map 2*/
+.contact-map-2 {
+    height: 270px;
+}
+/*Google Map*/
+.google-map {
+    &.cus-map {
+        height: 450px;
+    }
+}
+/*Contact Info List*/
+.contact-info-list {
+    & li {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            margin-right: 10px;
+        }
+        & span {}
+    }
+}
+/*Contact Info*/
+.contact-info {
+    & li {
+        text-align: center;
+        & .icon {
+            & i {
+                font-size: 30px;
+                line-height: 1;
+                color: $heading-color;
+            }
+        }
+        & .content {
+            & p {
+                font-size: 12px;
+                color: $heading-color;
+                text-transform: uppercase;
+                line-height: 24px;
+                font-weight: 700;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+/*Contact Info 2*/
+.contact-info-2 {
+    & li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        line-height: 1;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & .icon {
+            width: 60px;
+            & i {
+                font-size: 30px;
+                line-height: 1;
+                color: $heading-color;
+            }
+        }
+        & .content {
+            & p {
+                font-size: 12px;
+                color: $heading-color;
+                text-transform: uppercase;
+                line-height: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+}
+/*Contact Intro*/
+.contact-intro {
+    & .inner {
+        height: 100%;
+        padding: 60px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & h2 {
+            color: $white;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        & p {
+            color: $white;
+            & a {}
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            padding: 40px 20px;
+            & h2 {
+                font-size: 20px;
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            padding: 50px 30px;
+        }
+    }
+}
+
+/*Contact 2 Page Header*/
+.contact-2-page-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    & .content {
+        text-align: center;
+        padding: 30px 8% 0;
+        border: 5px solid $white;
+        border-bottom: none;
+        position: relative;
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 5px;
+            width: 50px;
+            background-color: $white;
+        }
+        &::before {
+            left: 0;
+            right: auto;
+        }
+        &::after {
+            left: auto;
+            right: 0;
+        }
+        & h1 {
+            font-size: 65px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 15px;
+        }
+        & p {
+            color: $white;
+            font-weight: 300;
+            margin-bottom: -7px;
+        }
+    }
+}
+/*Contact Social*/
+.contact-social {
+    display: flex;
+    margin: -10px;
+    & li {
+        margin: 10px;
+        & a {}
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .ribbon-callnow {
+            background-color:  nth($colorList, $i);
+            &::before, &::after {
+                border-top: 45px solid  nth($colorList, $i);
+                border-bottom: 45px solid  nth($colorList, $i);
+            }
+        }
+        & .freelancer-about {
+            & .social {
+                & a {
+                    &:hover {
+                        background-color: nth($colorList, $i);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

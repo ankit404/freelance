@@ -1,0 +1,97 @@
+/*--
+    Header Search
+------------------------------------------*/
+
+/*Search Form Fly Overlay*/
+.searchform-fly-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba($black, 0.94);
+    text-align: center;
+    transition: all 0.3s ease 0.25s;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba($white, 0.8);
+    //Search Close Button
+    & .btn-close-search {
+        font-size: 40px;
+        display: block;
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        line-height: 40px;
+        height: 40px;
+        &:hover {
+            transform: rotate(90deg);
+        }
+        @media #{$large-mobile} {
+            top: 20px;
+            right: 20px;
+        }
+    }
+    //Search Form Fly
+    & .searchform-fly {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 18px;
+        transform: scale(0.9);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out  0.25s;
+        width: 800px;
+        max-width: 90%;
+        & p {
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        & form {
+            position: relative;
+            & .search-field {
+                background-color: transparent;
+                box-shadow: 0 3px 0 0 rgba($white, 0.1);
+                border: 0;
+                text-align: center;
+                font-size: 35px;
+                padding: 20px 45px;
+                color: rgba($white, 0.8);
+                transition: all 0.3s ease-out 0s;
+                font-weight: 300;
+                width: 100%;
+                &:focus {
+                    box-shadow: 0 3px 0 0 rgba($white, 0.1) !important;
+                }
+            }
+            & .search-button {
+                position: absolute;
+                top: 18px;
+                right: 5px;
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                font-size: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+/*Open Search Form*/
+.searchform-fly-overlay {
+    &.open-search-form {
+        visibility: visible;
+        opacity: 1;
+        & .searchform-fly {
+            transform: scale(1);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

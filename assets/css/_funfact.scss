@@ -1,0 +1,91 @@
+/*--
+    Elements - Funfact
+------------------------------------------------------*/
+
+/*Funfact*/
+.funfact {
+    text-align: center;
+    & .number {
+        font-size: 45px;
+        color: $heading-color;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 11px;
+        margin-top: -7px;
+        & .uptimo-counter {}
+        & i {
+            font-style: normal;
+        }
+    }
+    & .title {
+        font-size: 18px;
+        line-height: 24px;
+        color: $heading-color;
+        margin: 0;
+    }
+    &.white {
+        & .number {
+            color: $white;
+        }
+        & .title {
+            color: $white;
+        }
+    }
+}
+
+/*Funfact 2*/
+.funfact-2 {
+    text-align: center;
+    & .number {
+        font-size: 70px;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        & .uptimo-counter {}
+        & i {
+            font-style: normal;
+        }
+    }
+    & .title {
+        line-height: 1;
+        color: $body-color;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &.white {
+        & .number {
+            color: $white;
+        }
+        & .title {
+            color: $white;
+        }
+    }
+    @media #{$small-mobile} {
+        & .number {
+            font-size: 56px;
+        }
+    }
+}
+
+/*Funfact 3*/
+.funfact-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .icon {
+        margin-right: 30px;
+        min-width: 90px;
+    }
+    & .content {
+        min-width: 160px;
+        & .number {}
+        & .title {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,242 @@
+/*--
+    Footer Widget
+------------------------------------------------------*/
+.uptimo-footer-widget {
+    & .footer-widget-inner {
+        & .widget-title {
+            line-height: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/*About Widget*/
+.uptimo-footer-widget-about {
+    & .footer-logo {}
+}
+.footer-social {
+    margin-top: 20px;
+    & a {
+        margin: 0 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        & i {
+            font-size: 16px;
+        }
+    }
+}
+
+/*Contact Widget*/
+.uptimo-footer-widget-contact {
+    margin-bottom: -10px;
+    & .contact-item {
+        padding-left: 50px;
+        margin-bottom: 10px;
+        position: relative;
+        & i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 28px;
+        }
+        & a {}
+    }
+}
+
+/*Twitter Widget SLider*/
+.uptimo-footer-widget-twitter-slider {
+    &.slick-dotted {
+        margin-bottom: 27px;
+    }
+    & .slick-dots {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        bottom: -27px;
+        & li {
+            font-size: 0;
+            line-height: 1;
+            margin: 0 5px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            & button {
+                text-indent: -9999px;
+                border: none;
+                background-color: rgba($white, 0.3);
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                line-height: 1;
+                padding: 0;
+            }
+            &.slick-active {
+                & button {
+                    background-color: rgba($white, 0.75);
+                }
+            }
+        }
+    }
+}
+
+/*Twitter Widget*/
+.uptimo-footer-widget-twitter {
+    & .twitter-item {
+        & p {
+            & .author {
+                font-weight: 800;
+                margin-right: 5px;
+            }
+            & .tweet-link {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/*Link Widget*/
+.uptimo-footer-widget-link {
+    display: flex;
+    flex-wrap: wrap;
+    & li {
+        flex: 1 0 100%;
+        margin-bottom: 14px;
+        &:last-child, &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+        & a {
+            display: block;
+        }
+    }
+}
+.uptimo-footer-widget-link-column-2 {
+    & li {
+        max-width: 50%;
+    }
+}
+
+/*Gallery Widget*/
+.uptimo-footer-widget-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    & .gallery-item {
+        max-width: 25%;
+        flex: 1 0 100%;
+        padding: 5px;
+        & a {
+            display: block;
+            overflow: hidden;
+            & img {
+                transition: all 0.3s ease 0s;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*Menu Widget*/
+.uptimo-footer-widget-menu {
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        @media #{$tablet-device} {
+            justify-content: center;
+        }
+        @media #{$large-mobile} {
+            justify-content: center;
+        }
+        & li {
+            margin: 0 15px;
+            & a {}
+        }
+    }
+    @media #{$tablet-device} {
+        justify-content: center !important;
+    }
+    @media #{$large-mobile} {
+        justify-content: center !important;
+    }
+}
+
+/*Subscribe Widget*/
+.uptimo-footer-widget-subscribe {
+    & form {
+        & input[type="email"] {
+            color: #9395a0;
+            border: 1px solid #9395a0;
+            background-color: transparent;
+            width: 100%;
+            line-height: 30px;
+            padding: 10px 20px;
+        }
+        & button, & input[type="submit"] {
+            color: $heading-color !important;
+            &:hover {
+                background-color: $black !important;
+                color: $white !important;
+            }
+        }
+    }
+    & .mailchimp-alerts {
+        & .mailchimp-submitting {
+            color: $white;
+        }
+        & .mailchimp-success {
+            color: #008000;
+        }
+        & .mailchimp-error {
+            color: #ff0000;
+        }
+    }
+}
+.uptimo-footer-widget-subscribe-2 {
+    max-width: 600px;
+    margin: auto;
+    & form {
+        position: relative;
+        & input[type="email"] {
+            color: #9395a0;
+            border: none;
+            border-bottom: 1px solid #9395a0;
+            background-color: transparent;
+            font-style: italic;
+            width: 100%;
+            line-height: 30px;
+            padding: 10px 100px 10px 0;
+        }
+        & button, & input[type="submit"] {
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            position: absolute;
+            line-height: 30px;
+            padding: 5px 0;
+            right: 0;
+            top: 5px;
+            font-weight: 700;
+        }
+    }
+    & .mailchimp-alerts {
+        & .mailchimp-submitting {
+            color: $white;
+        }
+        & .mailchimp-success {
+            color: #008000;
+        }
+        & .mailchimp-error {
+            color: #ff0000;
+        }
+    }
+}

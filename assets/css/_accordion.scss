@@ -1,0 +1,161 @@
+/*--
+    Elements - Accordion
+------------------------------------------------------*/
+
+/*Accordion*/
+.accordion {
+    & .card {
+        border: 1px solid rgba(169,174,189,0.30) !important;
+        border-radius: 4px !important;
+        background-color: $white;
+        margin-bottom: 20px;
+        transition: all 0.3s ease 0s;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        &.open {
+            border-color: $color-1 !important;
+            box-shadow: 0 0 87px 0 rgba(41,44,58,.1);
+        }
+        & .card-header {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            & h4 {
+                margin: 0;
+                & button {
+                    border: none;
+                    background-color: transparent;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    line-height: 24px;
+                    font-weight: 400;
+                    padding: 15px 30px;
+                    position: relative;
+                    color: $heading-color;
+                    &::before, &::after {
+                        position: absolute;
+                        content: "";
+                        background-color: $heading-color;
+                        top: 50%;
+                        margin-top: -1px;
+                        width: 10px;
+                        height: 2px;
+                        right: 20px;
+                        transition: all 0.3s ease 0s;
+                    }
+                    &.collapsed {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+            & h5 {
+                margin: 0;
+                & button {
+                    border: none;
+                    background-color: transparent;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 700;
+                    padding: 15px 30px;
+                    position: relative;
+                    color: $heading-color;
+                    &::before, &::after {
+                        position: absolute;
+                        content: "";
+                        background-color: $heading-color;
+                        top: 50%;
+                        margin-top: -1px;
+                        width: 10px;
+                        height: 2px;
+                        right: 20px;
+                        transition: all 0.3s ease 0s;
+                    }
+                    &.collapsed {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+        & .card-body {
+            padding: 0 30px 30px;
+            & p {}
+        }
+    }
+}
+/*Accordion 2*/
+.accordion-2 {
+    & .card {
+        border: none !important;
+        border-radius: 0 !important;
+        background-color: transparent;
+        margin-bottom: 50px;
+        transition: all 0.3s ease 0s;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        &.open {}
+        & .card-header {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            & h5 {
+                margin: 0;
+                & button {
+                    border: none;
+                    background-color: transparent;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight: 700;
+                    padding: 0;
+                    padding-left: 32px;
+                    position: relative;
+                    color: $heading-color;
+                    &::before, &::after {
+                        position: absolute;
+                        content: "";
+                        background-color: $heading-color;
+                        top: 11px;
+                        width: 10px;
+                        height: 2px;
+                        left: 11px;
+                        transition: all 0.3s ease 0s;
+                    }
+                    &.collapsed {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+        & .card-body {
+            padding: 0;
+            padding-left: 32px;
+            padding-top: 17px;
+            & p {}
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .card {
+            &.open {
+                border-color: nth($colorList, $i) !important;
+            }
+        }
+    }
+}

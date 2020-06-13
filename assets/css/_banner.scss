@@ -1,0 +1,648 @@
+/*--
+    Elements - Banner
+------------------------------------------------------*/
+
+/*Fashion Hot Summer Offer Content*/
+.fashion-hot-summer-offer-content {
+    max-width: 500px;
+    padding: 80px 50px 90px 70px;
+    & h1 {
+        font-size: 60px;
+        line-height: 1;
+        font-family: $font-playfair-display;
+        font-weight: 700;
+        margin-bottom: 17px;
+    }
+    & p {
+        font-size: 18px;
+        line-height: 2;
+        margin-bottom: 25px;
+    }
+    & .btn {}
+    @media #{$large-mobile} {
+        & h1 {
+            font-size: 50px;
+        }
+    }
+    @media #{$small-mobile} {
+        padding: 60px 40px 70px 40px;
+        & h1 {
+            font-size: 40px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        padding: 50px 30px 60px 30px;
+        & h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+/*Banner*/
+.banner {
+    & .inner {
+        position: relative;
+        overflow: hidden;
+        &::before {
+            z-index: 2;
+            transition: all 250ms ease-out;
+        }
+        &.overlay-cyan {
+            &::before {
+                background-color: #43e7d9;
+                opacity: 0.7;
+            }            
+        }
+        &.overlay-dark {
+            &::before {
+                background-color: #171a2a;
+                opacity: 0.2;
+            }            
+        }
+        &.overlay-red {
+            &::before {
+                background-color: #d71a35;
+                opacity: 0.7;
+            }            
+        }
+        & img {
+            width: 100%;
+            transition: opacity 0.35s, transform 1s;
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            z-index: 9;
+            & h1 {
+                font-family: $font-playfair-display;
+                font-size: 60px;
+                color: $white;
+                font-weight: 700;
+                margin-bottom: 2px;
+            }
+            & h2 {
+                color: $white;
+                font-family: $font-playfair-display;
+                font-style: italic;
+                margin-bottom: 18px;
+            }
+            & span {
+                width: 330px;
+                max-width: 100%;
+                display: block;
+                margin: auto;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 5px 10px;
+                line-height: 20px;
+            }
+        }
+        & .banner-overlay-link {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99;
+        }
+    }
+    &:hover {
+        & .inner {
+            &::before {
+                opacity: 0;
+            }
+            & img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+    @media #{$laptop-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 44px;
+                }
+                & h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    @media #{$desktop-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 36px;
+                }
+                & h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 25px;
+                }
+                & h2 {
+                    font-size: 14px;
+                }
+                & span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 36px;
+                }
+                & h2 {
+                    font-size: 18px;
+                }
+                & span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/*Banner 2*/
+.banner-2 {
+    & .inner {
+        padding: 80px 0 90px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        & .content {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            padding: 0 15px;
+            & h1 {
+                font-family: $font-playfair-display;
+                font-size: 50px;
+                line-height: 1;
+                color: $heading-color-light;
+                & span {
+                    font-family: $font-montserrat;
+                    font-weight: 700;
+                }
+            }
+            & p {
+                color: $heading-color-light;
+                font-style: italic;
+                margin-bottom: 40px;
+            }
+            & .btn {}
+        }
+    }
+    @media #{$laptop-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 44px;
+                }
+            }
+        }
+    }
+    @media #{$desktop-device} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & .content {
+                & h1 {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*Banner 3*/
+.banner-3 {
+    & .inner {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            border-top: 1px solid $white;
+            border-bottom: 1px solid $white;
+            transform: rotate(45deg) scale(1, 0);
+            transition: opacity 0.35s, transform 1s;
+            opacity: 0;
+            z-index: 3;
+        }
+        & img {
+            width: 100%;
+            transition: opacity 0.35s, transform 1s
+        }
+        & h1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 20px 50px;
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: $white;
+            & span {
+                display: inline-block;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 10px;
+                    height: 3px;
+                    width: 100%;
+                    background-color: $color-1;
+                }
+            }
+        }
+        &:hover {
+            &::before {
+                transform: rotate(45deg) scale(1, 1);
+                opacity: 1;
+            }
+            & img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+    @media #{$laptop-device} {
+        & .inner {
+            & h1 {
+                font-size: 36px;
+                padding: 15px 30px;
+                & span {
+                    &::before {
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & h1 {
+                font-size: 44px;
+                padding: 20px 30px;
+                & span {
+                    &::before {
+                        bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        & .inner {
+            & h1 {
+                font-size: 36px;
+                padding: 15px 25px;
+                & span {
+                    &::before {
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .inner {
+            & h1 {
+                padding: 20px 50px;
+                font-size: 50px;
+                & span {
+                    &::before {
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & h1 {
+                font-size: 36px;
+                padding: 15px 30px;
+                & span {
+                    &::before {
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Banner 4*/
+.banner-4 {
+    & .inner {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            transition: opacity 0.35s, transform 1s;
+            background-color: $heading-color;
+            opacity: 0.6;
+            z-index: 3;
+        }
+        &::after {
+            content: "";
+            border-left: 90px solid transparent;
+            border-bottom: 50px solid $color-1;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+        & img {
+            width: 100%;
+            transition: opacity 0.35s, transform 1s
+        }
+        & .content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 30px 50px;
+            z-index: 9;
+            & h3 {
+                font-weight: 800;
+                color: $white;
+                text-transform: uppercase;
+            }
+            & p {
+                color: $white;
+                margin: 0;
+            }
+        }
+        &:hover {
+            &::before {
+                opacity: 0.2;
+            }
+            & img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .inner {
+            & .content {
+                padding: 20px 30px;
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .inner {
+            & .content {
+                padding: 20px 30px;
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & .inner {
+            & .content {
+                padding: 15px 20px;
+            }
+        }
+    }
+}
+
+/*Beauty Spa Banner*/
+.beauty-spa-banner {
+    & .inner {
+        
+        & .image {
+            display: block;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s ease 0s;
+                background-color: $heading-color;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 5;
+            }
+            &::after {
+                content: "\62";
+                font-family: $optima;
+                font-size: 30px;
+                line-height: 1;
+                color: $white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transition: all 0.4s ease 0.2s;
+                transform: translateX(-50%) translateY(-50%);
+                opacity: 0;
+                visibility: hidden;
+                z-index: 9;
+                margin-top: 35px;
+            }
+            & img {
+                width: 100%;
+            }
+        }
+        & .content {
+            padding: 30px 30px 0;
+            & h4 {
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            & .separator {
+                margin-bottom: 10px;
+            }
+            & p {
+                font-size: 14px;
+                line-height: 30px;
+                margin-bottom: 40px;
+            }
+            & .btn {
+                padding: 9px 25px;
+            }
+        }
+        
+        &:hover {
+            & .image {
+                &::before {
+                    opacity: 0.5;
+                    visibility: visible;
+                }
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+/*Beauty Spa Banner 2*/
+.beauty-spa-banner-2 {
+    & .inner {
+        border: 1px solid $gray-2;
+        transition: all .3s ease;
+        & .image {
+            display: block;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s ease 0s;
+                background-color: $heading-color;
+                opacity: 0;
+                visibility: hidden;
+                z-index: 5;
+            }
+            &::after {
+                content: "\62";
+                font-family: $optima;
+                font-size: 30px;
+                line-height: 1;
+                color: $white;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transition: all 0.4s ease 0.2s;
+                transform: translateX(-50%) translateY(-50%);
+                opacity: 0;
+                visibility: hidden;
+                z-index: 9;
+                margin-top: 35px;
+            }
+            & img {
+                width: 100%;
+            }
+        }
+        & .content {
+            padding: 30px;
+            position: relative;
+            & [class*="badge-"] {
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                width: 40px;
+                height: 40px;
+                font-size: 12px;
+                color: $white;
+                line-height: 30px;
+                padding: 5px;
+                text-align: center;
+                border-radius: 50%;
+            }
+            & .badge-sale {
+                background-color: $color-8;
+            }
+            & h5 {
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            & h6 {
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            & .separator {
+                margin-bottom: 10px;
+            }
+            & p {
+                font-size: 14px;
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+            & .btn {}
+        }
+        
+        &:hover {
+            box-shadow: 0 0 54px 0 rgba(0,0,0,.13);
+            & .image {
+                &::before {
+                    opacity: 0.5;
+                    visibility: visible;
+                }
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 0;
+                }
+            }
+        }
+        
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .banner-3 {
+            & .inner {
+                & h1 {
+                    & span {
+                        &::before {
+                            background-color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+        & .banner-4 {
+            & .inner {
+                &::after {
+                    border-bottom-color: nth($colorList, $i);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,518 @@
+/*-- 
+    Element - Socail
+-----------------------------------------------*/
+
+/*Socail Sharing*/
+.social-sharing {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    &.semi-rounded {
+        & a {
+            border-radius: 4px;
+        }
+    }
+    &.square {
+        & a {
+            border-radius: 0;
+        }
+    }
+    &.sm {
+        & a {
+            width: 26px;
+            height: 26px;
+            & i {
+                font-size: 13px;
+                line-height: 27px;
+            }
+        }
+    }
+    &.lg {
+        & a {
+            width: 38px;
+            height: 38px;
+            & i {
+                font-size: 16px;
+                line-height: 39px;
+            }
+        }
+    }
+    &.xl {
+        & a {
+            width: 46px;
+            height: 46px;
+            & i {
+                font-size: 18px;
+                line-height: 47px;
+            }
+        }
+    }
+    & a {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        border-radius: 50%;
+        color: $white;
+        margin: 5px;
+        justify-content: center;
+        border: none;
+        &:hover {
+            color: $white !important;
+        }
+        & i {
+            font-size: 14px;
+            line-height: 31px;
+        }
+        &.android {
+            background-color: lighten($android, 5);
+            &:hover {
+                background-color: $android;
+            }
+        }
+        &.apple {
+            background-color: lighten($apple, 5);
+            &:hover {
+                background-color: $apple;
+            }
+        }
+        &.behance {
+            background-color: lighten($behance, 5);
+            &:hover {
+                background-color: $behance;
+            }
+        }
+        &.codepen {
+            background-color: lighten($codepen, 5);
+            &:hover {
+                background-color: $codepen;
+            }
+        }
+        &.dribbble {
+            background-color: lighten($dribbble, 5);
+            &:hover {
+                background-color: $dribbble;
+            }
+        }
+        &.dropbox {
+            background-color: lighten($dropbox, 5);
+            &:hover {
+                background-color: $dropbox;
+            }
+        }
+        &.evernote {
+            background-color: lighten($evernote, 5);
+            &:hover {
+                background-color: $evernote;
+            }
+        }
+        &.facebook {
+            background-color: lighten($facebook, 5);
+            &:hover {
+                background-color: $facebook;
+            }
+        }
+        &.github {
+            background-color: lighten($github, 5);
+            &:hover {
+                background-color: $github;
+            }
+        }
+        &.google-drive {
+            background-color: lighten($google-drive, 5);
+            &:hover {
+                background-color: $google-drive;
+            }
+        }
+        &.google-earth {
+            background-color: lighten($google-earth, 5);
+            &:hover {
+                background-color: $google-earth;
+            }
+        }
+        &.google-glass {
+            background-color: lighten($google-glass, 5);
+            &:hover {
+                background-color: $google-glass;
+            }
+        }
+        &.google-maps {
+            background-color: lighten($google-maps, 5);
+            &:hover {
+                background-color: $google-maps;
+            }
+        }
+        &.google-play {
+            background-color: lighten($google-play, 5);
+            &:hover {
+                background-color: $google-play;
+            }
+        }
+        &.google-plus {
+            background-color: lighten($google-plus, 5);
+            &:hover {
+                background-color: $google-plus;
+            }
+        }
+        &.google {
+            background-color: lighten($google, 5);
+            &:hover {
+                background-color: $google;
+            }
+        }
+        &.instagram {
+            background-color: lighten($instagram, 5);
+            &:hover {
+                background-color: $instagram;
+            }
+        }
+        &.css3 {
+            background-color: lighten($css3, 5);
+            &:hover {
+                background-color: $css3;
+            }
+        }
+        &.html5 {
+            background-color: lighten($html5, 5);
+            &:hover {
+                background-color: $html5;
+            }
+        }
+        &.javascript {
+            background-color: lighten($javascript, 5);
+            &:hover {
+                background-color: $javascript;
+            }
+        }
+        &.python {
+            background-color: lighten($python, 5);
+            &:hover {
+                background-color: $python;
+            }
+        }
+        &.lastfm {
+            background-color: lighten($lastfm, 5);
+            &:hover {
+                background-color: $lastfm;
+            }
+        }
+        &.linkedin {
+            background-color: lighten($linkedin, 5);
+            &:hover {
+                background-color: $linkedin;
+            }
+        }
+        &.paypal {
+            background-color: lighten($paypal, 5);
+            &:hover {
+                background-color: $paypal;
+            }
+        }
+        &.pinterest {
+            background-color: lighten($pinterest, 5);
+            &:hover {
+                background-color: $pinterest;
+            }
+        }
+        &.pocket {
+            background-color: lighten($pocket, 5);
+            &:hover {
+                background-color: $pocket;
+            }
+        }
+        &.polymer {
+            background-color: lighten($polymer, 5);
+            &:hover {
+                background-color: $polymer;
+            }
+        }
+        &.rss {
+            background-color: lighten($rss, 5);
+            &:hover {
+                background-color: $rss;
+            }
+        }
+        &.share {
+            background-color: lighten($share, 5);
+            &:hover {
+                background-color: $share;
+            }
+        }
+        &.stackoverflow {
+            background-color: lighten($stackoverflow, 5);
+            &:hover {
+                background-color: $stackoverflow;
+            }
+        }
+        &.steam {
+            background-color: lighten($steam, 5);
+            &:hover {
+                background-color: $steam;
+            }
+        }
+        &.twitter {
+            background-color: lighten($twitter, 5);
+            &:hover {
+                background-color: $twitter;
+            }
+        }
+        &.vk {
+            background-color: lighten($vk, 5);
+            &:hover {
+                background-color: $vk;
+            }
+        }
+        &.wikipedia {
+            background-color: lighten($wikipedia, 5);
+            &:hover {
+                background-color: $wikipedia;
+            }
+        }
+        &.windows {
+            background-color: lighten($windows, 5);
+            &:hover {
+                background-color: $windows;
+            }
+        }
+        &.s500px {
+            background-color: lighten($s500px, 5);
+            &:hover {
+                background-color: $s500px;
+            }
+        }
+        &.s8tracks {
+            background-color: lighten($s8tracks, 5);
+            &:hover {
+                background-color: $s8tracks;
+            }
+        }
+        &.amazon {
+            background-color: lighten($amazon, 5);
+            &:hover {
+                background-color: $amazon;
+            }
+        }
+        &.blogger {
+            background-color: lighten($blogger, 5);
+            &:hover {
+                background-color: $blogger;
+            }
+        }
+        &.delicious {
+            background-color: lighten($delicious, 5);
+            &:hover {
+                background-color: $delicious;
+            }
+        }
+        &.disqus {
+            background-color: lighten($disqus, 5);
+            &:hover {
+                background-color: $disqus;
+            }
+        }
+        &.flattr {
+            background-color: lighten($flattr, 5);
+            &:hover {
+                background-color: $flattr;
+            }
+        }
+        &.flickr {
+            background-color: lighten($flickr, 5);
+            &:hover {
+                background-color: $flickr;
+            }
+        }
+        &.odnoklassniki {
+            background-color: lighten($odnoklassniki, 5);
+            &:hover {
+                background-color: $odnoklassniki;
+            }
+        }
+        &.outlook {
+            background-color: lighten($outlook, 5);
+            &:hover {
+                background-color: $outlook;
+            }
+        }
+        &.playstation {
+            background-color: lighten($playstation, 5);
+            &:hover {
+                background-color: $playstation;
+            }
+        }
+        &.reddit {
+            background-color: lighten($reddit, 5);
+            &:hover {
+                background-color: $reddit;
+            }
+        }
+        &.skype {
+            background-color: lighten($skype, 5);
+            &:hover {
+                background-color: $skype;
+            }
+        }
+        &.slideshare {
+            background-color: lighten($slideshare, 5);
+            &:hover {
+                background-color: $slideshare;
+            }
+        }
+        &.soundcloud {
+            background-color: lighten($soundcloud, 5);
+            &:hover {
+                background-color: $soundcloud;
+            }
+        }
+        &.tumblr {
+            background-color: lighten($tumblr, 5);
+            &:hover {
+                background-color: $tumblr;
+            }
+        }
+        &.twitch {
+            background-color: lighten($twitch, 5);
+            &:hover {
+                background-color: $twitch;
+            }
+        }
+        &.vimeo {
+            background-color: lighten($vimeo, 5);
+            &:hover {
+                background-color: $vimeo;
+            }
+        }
+        &.whatsapp {
+            background-color: lighten($whatsapp, 5);
+            &:hover {
+                background-color: $whatsapp;
+            }
+        }
+        &.xbox {
+            background-color: lighten($xbox, 5);
+            &:hover {
+                background-color: $xbox;
+            }
+        }
+        &.yahoo {
+            background-color: lighten($yahoo, 5);
+            &:hover {
+                background-color: $yahoo;
+            }
+        }
+        &.youtube {
+            background-color: lighten($youtube, 5);
+            &:hover {
+                background-color: $youtube;
+            }
+        }
+    }
+}
+
+/*Socail Sharing 2*/
+.social-sharing-2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+    &.semi-rounded {
+        & a {
+            border-radius: 4px;
+        }
+    }
+    &.square {
+        & a {
+            border-radius: 0;
+        }
+    }
+    &.sm {
+        & a {
+            width: 26px;
+            height: 26px;
+            & i {
+                font-size: 13px;
+                line-height: 27px;
+            }
+        }
+    }
+    &.lg {
+        & a {
+            width: 38px;
+            height: 38px;
+            & i {
+                font-size: 16px;
+                line-height: 39px;
+            }
+        }
+    }
+    &.xl {
+        & a {
+            width: 46px;
+            height: 46px;
+            & i {
+                font-size: 18px;
+                line-height: 47px;
+            }
+        }
+    }
+    & a {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        border-radius: 50%;
+        border: 1px solid $gray-2;
+        margin: 5px;
+        justify-content: center;
+        & i {
+            font-size: 14px;
+            line-height: 29px;
+        }
+    }
+}
+
+/*Home Handmade Socail*/
+.handmade-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -20px;
+    & a {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 30px;
+        color: $color-1;
+        border: 1px solid rgba($white, 0.5);
+        margin: 20px;
+        & i {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &:hover {
+            background-color: $white;
+            color: $color-1;
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .social-sharing-2 {
+            & a {
+                &:hover {
+                    color: $white;
+                    border-color: transparent;
+                    background-color: nth($colorList, $i);
+                }
+            }
+        }
+        & .handmade-social {
+            & a {
+                color: nth($colorList, $i);
+                &:hover {
+                    color: nth($colorList, $i);
+                }
+            }
+        }
+    }
+}

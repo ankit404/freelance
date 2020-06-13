@@ -1,0 +1,35 @@
+/*--
+    Off Canvas Widget
+------------------------------------------------------*/
+
+.off-canvas-widget-wrap {
+    & .sidebar-widget {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*Widget*/
+.off-canvas-widget {
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*Social Widget*/
+.off-canvas-widget-social {
+    display: flex;
+    flex-wrap: wrap;
+    & a {
+        margin: 0 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

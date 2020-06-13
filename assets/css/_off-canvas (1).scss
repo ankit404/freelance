@@ -1,0 +1,495 @@
+/*--
+    Header Off Canvas
+------------------------------------------*/
+.off-canvas {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: -400px;
+
+    visibility: hidden;
+
+    width: 400px;
+    height: 100vh;
+
+    transition: all 400ms ease-out;
+
+    opacity: 0;
+    background-color: $white;
+    box-shadow: 0 0 87px 0 rgba($black, 0.09);
+
+    @media #{$extra-small-mobile} {
+        width: 280px;
+    }
+}
+
+/*Open Off Canvas*/
+.off-canvas {
+    &.off-canvas-left {
+        right: auto;
+        left: -400px;
+
+        & .btn-close-off-canvas {
+            right: -66px;
+            left: auto;
+
+            @media #{$extra-small-mobile} {
+                right: -40px;
+            }
+        }
+    }
+
+    &.off-canvas-open {
+        right: 0;
+
+        visibility: visible;
+
+        opacity: 1;
+
+        &.off-canvas-left {
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+/*Off Canvas Wrap*/
+.off-canvas-wrap {
+    height: 100%;
+    padding: 70px 0 80px;
+
+    @media #{$large-mobile} {
+        padding: 40px 0;
+    }
+}
+
+/*Off Canvas Close Button*/
+.btn-close-off-canvas {
+    line-height: 66px;
+
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -66px;
+
+    width: 66px;
+    height: 66px;
+
+    text-align: center;
+
+    color: #FFF;
+    background: #343538;
+
+    @media #{$extra-small-mobile} {
+        line-height: 40px;
+
+        left: -40px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    & i {
+        font-size: 32px;
+        line-height: inherit;
+
+        display: block;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $color-1;
+
+        & i {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+/*Off Canvas Inner*/
+.off-canvas-inner {
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 0 60px;
+
+    @media #{$large-mobile} {
+        padding: 0 30px;
+    }
+}
+
+/*Off Canvas Nav*/
+.off-canvas-nav {
+    margin-bottom: 40px;
+
+    color: $heading-color;
+
+    & > ul {
+        list-style: none;
+
+        & > li {
+            position: relative;
+
+            & > a {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 30px;
+
+                display: block;
+
+                padding: 10px 0;
+
+                transition: all 0.2s ease 0s;
+            }
+
+            &:hover {
+                & > .menu-expand {
+                    & i {
+                        border-color: $color-1;
+
+                        &::before {
+                            border-color: $color-1;
+                        }
+                    }
+                }
+            }
+
+            & .menu-expand {
+                line-height: 50px;
+
+                position: absolute;
+                z-index: 5;
+                top: -1px;
+                right: 0;
+
+                width: 30px;
+                height: 50px;
+
+                cursor: pointer;
+                text-align: center;
+
+                & i {
+                    position: relative;
+
+                    display: block;
+
+                    width: 14px;
+                    margin-top: 25px;
+                    margin-right: auto;
+                    margin-left: auto;
+
+                    transition: all 250ms ease-out;
+
+                    border-bottom: 1px solid;
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+
+                        display: block;
+
+                        width: 100%;
+
+                        content: "";
+                        transition: all 250ms ease-out;
+                        transform: rotate(90deg);
+
+                        border-bottom: 1px solid;
+                    }
+                }
+
+                &:hover {
+                    & i {
+                        border-color: $color-1;
+
+                        &::before {
+                            border-color: $color-1;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                & > ul,
+                & > .sub-menu {
+                    margin-left: 35px !important;
+                }
+            }
+
+            &.active {
+                & > .menu-expand {
+                    & i {
+                        &::before {
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+
+            & ul,
+            & .sub-menu {
+                position: static;
+
+                visibility: visible;
+
+                width: auto;
+                margin-top: 0;
+                margin-left: 35px;
+                padding: 0;
+
+                list-style: none;
+
+                transition: none;
+
+                opacity: 1;
+                background-color: transparent;
+                box-shadow: none;
+
+                & li {
+                    position: relative;
+
+                    &.menu-item-has-children,
+                    &.has-children,
+                    &.has-sub-menu {
+                        & > a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    & a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 30px;
+
+                        display: block;
+
+                        padding: 10px 0;
+
+                        transition: all 0.2s ease 0s;
+                    }
+
+                    &:hover {
+                        & > ul,
+                        & > .sub-menu {
+                            margin-left: 35px !important;
+                        }
+                    }
+
+                    &.active {
+                        & .menu-expand {
+                            & i {
+                                &::before {
+                                    transform: rotate(0deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Header Aside*/
+.header-aside {
+    & .off-canvas-nav {
+        & > ul {
+            & > li {
+                & > a {
+                    font-size: inherit;
+
+                    position: relative;
+
+                    padding-left: 25px;
+
+                    text-transform: uppercase;
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+
+                        display: block;
+
+                        width: 6px;
+                        height: 6px;
+                        margin-top: -3px;
+
+                        content: "";
+
+                        background-color: $color-1;
+                    }
+                }
+
+                & .menu-expand {
+                    line-height: 50px;
+
+                    position: absolute;
+                    z-index: 5;
+                    top: -1px;
+                    right: 0;
+
+                    width: 30px;
+                    height: 50px;
+
+                    cursor: pointer;
+                    text-align: center;
+
+                    & i {
+                        position: relative;
+
+                        display: block;
+
+                        width: 14px;
+                        margin-top: 25px;
+                        margin-right: auto;
+                        margin-left: auto;
+
+                        transition: all 250ms ease-out;
+
+                        border-bottom: 1px solid;
+
+                        &::before {
+                            position: absolute;
+                            top: 0;
+
+                            display: block;
+
+                            width: 100%;
+
+                            content: "";
+                            transition: all 250ms ease-out;
+                            transform: rotate(90deg);
+
+                            border-bottom: 1px solid;
+                        }
+                    }
+
+                    &:hover {
+                        & i {
+                            border-color: $color-1;
+
+                            &::before {
+                                border-color: $color-1;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    & > ul,
+                    & > .sub-menu {
+                        margin-left: 25px !important;
+                    }
+                }
+
+                & ul,
+                & .sub-menu {
+                    min-width: auto !important;
+                    margin-left: 25px;
+
+                    & li {
+                        &:hover {
+                            & > ul,
+                            & > .sub-menu {
+                                margin-left: 25px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .btn-close-off-canvas {
+            &:hover {
+                color: $white;
+                background-color: nth($colorList, $i);
+            }
+        }
+
+        & .off-canvas-nav {
+            & > ul {
+                & > li {
+                    &:hover {
+                        & > a {
+                            color: nth($colorList, $i);
+                        }
+
+                        & > .menu-expand {
+                            & i {
+                                border-color: nth($colorList, $i);
+
+                                &::before {
+                                    border-color: nth($colorList, $i);
+                                }
+                            }
+                        }
+                    }
+
+                    & .menu-expand {
+                        &:hover {
+                            & i {
+                                border-color: nth($colorList, $i);
+
+                                &::before {
+                                    border-color: nth($colorList, $i);
+                                }
+                            }
+                        }
+                    }
+
+                    & ul,
+                    & .sub-menu {
+                        & li {
+                            &:hover {
+                                & > a {
+                                    color: nth($colorList, $i);
+                                }
+
+                                & > .menu-expand {
+                                    & i {
+                                        border-color: nth($colorList, $i);
+
+                                        &::before {
+                                            border-color: nth($colorList, $i);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .header-aside {
+            & .off-canvas-nav {
+                & > ul {
+                    & > li {
+                        & > a {
+                            &::before {
+                                background-color: nth($colorList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Off Canvas Widget*/
+.off-canvas-widget-wrap {
+}

@@ -1,0 +1,218 @@
+/*--
+    Header Toggle Buttons
+------------------------------------------*/
+.header-toggle-buttons {
+    position: relative;
+    float: right;
+    align-self: center;
+    & [class*="header-toggle"] {
+        float: left;
+        & > a {
+            width: 40px;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            line-height: 40px;
+            position: relative;
+            color: $heading-color;
+            &:hover {
+                color: $color-1;
+            }
+            & i {
+                display: block;
+                line-height: inherit;
+            }
+            & .cart-count {
+                position: absolute;
+                font-size: 10px;
+                height: 15px;
+                line-height: 15px;
+                background: #ee3c3c;
+                color: $white;
+                display: block;
+                font-family: $font-source-sans-pro;
+                top: 0;
+                right: 4px;
+                min-width: 15px;
+                text-align: center;
+                padding: 0;
+                border-radius: 50%;
+            }
+        }
+        // Menu Toggle Box Style
+        &.header-toggle-menu-box {
+            & > a {
+                color: $white;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                margin: -10px 0;
+                margin-left: 20px;
+                background-color: $heading-color;
+                border-radius: 50%;
+                @media #{$desktop-device} {
+                    margin-left: 10px;
+                }
+                &:hover {
+                    color: $white;
+                    background-color: $color-1;
+                }
+            }
+        }
+    }
+}
+/*Header Transparent*/
+.header-transparent {
+    & .header-toggle-buttons {
+        & [class*="header-toggle"] {
+            & > a {
+                &:hover {
+                    color: $white !important;
+                    @media only screen and (max-width: 991px) {
+                        color: $color-1 !important;
+                    }
+                }
+            }
+            // Menu Toggle Box Style
+            &.header-toggle-menu-box {
+                & > a {
+                    background-color: $white;
+                    color: $heading-color;
+                    &:hover {
+                        background-color: $color-1;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+/*Header Sticky*/
+.is-sticky {
+    & .header-toggle-buttons {
+        & [class*="header-toggle"] {
+            & > a {
+                color: $heading-color;
+                &:hover {
+                    color: $color-1;
+                }
+            }
+            // Menu Toggle Box Style
+            &.header-toggle-menu-box {
+                & > a {
+                    background-color: $heading-color;
+                    color: $white;
+                    &:hover {
+                        background-color: $color-1;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.header-sticky-2 {
+        & .header-toggle-buttons {
+            & [class*="header-toggle"] {
+                & > a {
+                    color: $white;
+                    &:hover {
+                        color: $color-1;
+                    }
+                }
+                // Menu Toggle Box Style
+                &.header-toggle-menu-box {
+                    & > a {
+                        background-color: $white;
+                        color: $heading-color;
+                        &:hover {
+                            background-color: $color-1;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header Dark*/
+.header-dark {
+    & .header-toggle-buttons {
+        & [class*="header-toggle"] {
+            & > a {
+                color: $white;
+                &:hover {
+                    color: $color-1;
+                }
+            }
+            // Menu Toggle Box Style
+            &.header-toggle-menu-box {
+                & > a {
+                    color: $heading-color;
+                    background-color: $white;
+                    &:hover {
+                        color: $white;
+                        background-color: $color-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .header-toggle-buttons {
+            & [class*="header-toggle"] {
+                & > a {
+                    &:hover {
+                        color: nth($colorList, $i) ;
+                    }
+                }
+                &.header-toggle-menu-box {
+                    & > a {
+                        &:hover {
+                            color: $white;
+                            background-color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+        & .header-transparent {
+            & .header-toggle-buttons {
+                & [class*="header-toggle"] {
+                    & > a {
+                        &:hover {
+                            @media only screen and (max-width: 991px) {
+                                color: nth($colorList, $i) !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        & .is-sticky {
+            & .header-toggle-buttons {
+                & [class*="header-toggle"] {
+                    & > a {
+                        &:hover {
+                            color: nth($colorList, $i) !important;
+                        }
+                    }
+                    // Menu Toggle Box Style
+                    &.header-toggle-menu-box {
+                        & > a {
+                            &:hover {
+                                background-color: nth($colorList, $i);
+                                color: $white !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

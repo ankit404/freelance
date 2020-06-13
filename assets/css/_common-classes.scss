@@ -1,0 +1,522 @@
+/*-- 
+    - Common Classes
+------------------------------------------------------*/
+.fix {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.section,
+.main-wrapper {
+    float: left;
+
+    width: 100%;
+}
+
+.section {
+    &.section-wide {
+        @media only screen and (min-width: 1500px) {
+            padding-right: 65px;
+            padding-left: 65px;
+        }
+    }
+}
+
+.height-100vh {
+    min-height: 100vh;
+
+    @media #{$large-mobile} {
+        height: auto;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media #{$small-mobile} {
+    .container {
+        max-width: 450px;
+    }
+}
+
+@media #{$extra-small-mobile} {
+    .container {
+        max-width: 320px;
+    }
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    & > .col,
+    & > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.grid-5-column {
+    & > .col,
+    & > [class*="col-"] {
+        @media only screen and (min-width: 1500px) {
+            flex: 0 0 20%;
+
+            max-width: 20%;
+        }
+    }
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+/*--
+    - Position
+------------------------------------------------------*/
+.static {
+    position: static !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+/*--
+    - Background Image
+------------------------------------------------------*/
+.bg-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &.bg-fixed {
+        background-attachment: fixed;
+    }
+}
+
+/*--
+    - Background Parallax
+------------------------------------------------------*/
+.parallax-bg {
+    & .parallax-inner {
+        z-index: -9 !important;
+
+        transition: transform 0s linear -1ms !important;
+    }
+}
+
+/*--
+    - Font Family, Weight, Letter Spacing, Style & Text Color Classes
+------------------------------------------------------*/
+
+/*Font Family*/
+.ff-herrVonMuellerhoff {
+    font-family: $font-herrVonMuellerhoff !important;
+}
+
+.ff-playfair-display {
+    font-family: $font-playfair-display !important;
+}
+
+.ff-montserrat {
+    font-family: $font-montserrat !important;
+}
+
+.ff-source-sans-pro {
+    font-family: $font-source-sans-pro !important;
+}
+
+.ff-poppins {
+    font-family: $font-poppins !important;
+}
+
+.ff-roboto-condensed {
+    font-family: $font-roboto-condensed !important;
+}
+
+.ff-roboto-slab {
+    font-family: $font-roboto-slab !important;
+}
+
+.ff-roboto {
+    font-family: $font-roboto !important;
+}
+
+.ff-merriweather {
+    font-family: $font-merriweather !important;
+}
+
+.ff-mrDafoe {
+    font-family: $font-mrDafoe !important;
+}
+
+.ff-nothingYouCouldDo {
+    font-family: $font-nothingYouCouldDo !important;
+}
+
+/*Font Weight*/
+@for $i from 1 through 9 {
+    .font-weight-#{100 * $i} {
+        font-weight: 100 * $i !important;
+    }
+}
+
+/*Letter Spacing*/
+@for $i from 1 through 10 {
+    .letter-spacing-#{1 * $i} {
+        letter-spacing: 1px * $i !important;
+    }
+}
+
+/*Font Style*/
+.fs-normal {
+    font-style: normal !important;
+}
+
+.fs-italic {
+    font-style: italic !important;
+}
+
+/*--
+    Text Color
+------------------------------------------------------*/
+.text-white {
+    color: #FFFFFF !important;
+}
+
+.text-dark {
+    color: $dark !important;
+}
+
+.text-body {
+    color: $body-color !important;
+}
+
+.text-heading {
+    color: $heading-color !important;
+}
+
+.text-heading-light {
+    color: $heading-color-light !important;
+}
+
+.text-black {
+    color: $black !important;
+}
+
+// Text Color Gray
+@for $i from 1 through length($grayList) {
+    .text-gray-#{$i} {
+        color: nth($grayList, $i) !important;
+    }
+}
+
+// This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+.text-color {
+    color: $color-1 !important;
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .text-color {
+            color: nth($colorList, $i) !important;
+        }
+    }
+}
+
+// Text Color Template Color (Fixed with a Number 1 to 11)
+@for $i from 1 through length($colorList) {
+    .text-color-#{$i} {
+        color: nth($colorList, $i) !important;
+    }
+}
+
+/*--
+    Border
+------------------------------------------------------*/
+.border {
+    border: 1px solid transparent;
+}
+
+.border-top {
+    border-top: 1px solid transparent;
+}
+
+.border-bottom {
+    border-bottom: 1px solid transparent;
+}
+
+.border-left {
+    border-left: 1px solid transparent;
+}
+
+.border-right {
+    border-right: 1px solid transparent;
+}
+
+// Border Color
+.border-white {
+    border-color: $white !important;
+}
+
+.border-dark {
+    border-color: $dark !important;
+}
+
+.border-body {
+    border-color: $body-color !important;
+}
+
+.border-heading {
+    border-color: $heading-color !important;
+}
+
+.border-heading-light {
+    border-color: $heading-color-light !important;
+}
+
+.border-black {
+    border-color: $black !important;
+}
+
+// Border Color Gray
+@for $i from 1 through length($grayList) {
+    .border-gray-#{$i} {
+        border-color: nth($grayList, $i) !important;
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+// This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+.border-color {
+    border-color: $color-1 !important;
+}
+
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .border-color {
+            border-color: nth($colorList, $i) !important;
+        }
+    }
+}
+
+// Border Color Template Color (Fixed with a Number 1 to 11)
+@for $i from 1 through length($colorList) {
+    .border-color-#{$i} {
+        border-color: nth($colorList, $i) !important;
+    }
+}
+
+/*--
+    Background Color
+------------------------------------------------------*/
+.bg-white {
+    background-color: #FFFFFF !important;
+}
+
+.bg-dark {
+    background-color: $dark !important;
+}
+
+.bg-body {
+    background-color: $body-color !important;
+}
+
+.bg-heading {
+    background-color: $heading-color !important;
+}
+
+.bg-heading-light {
+    background-color: $heading-color-light !important;
+}
+
+.bg-black {
+    background-color: $black !important;
+}
+
+.bg-gray {
+    background-color: #F7F7F7;
+}
+
+@for $i from 1 through length($grayList) {
+    .bg-gray-#{$i} {
+        background-color: nth($grayList, $i);
+    }
+}
+
+@for $i from 1 through length($colorList) {
+    .bg-color-#{$i} {
+        background-color: nth($colorList, $i) !important;
+    }
+}
+
+// Background Color Gray
+@for $i from 1 through length($grayList) {
+    .bg-gray-#{$i} {
+        background-color: nth($grayList, $i) !important;
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+// This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+.bg-color {
+    background-color: $color-1 !important;
+}
+
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .bg-color {
+            background-color: nth($colorList, $i) !important;
+        }
+    }
+}
+
+// Background Color Template Color (Fixed with a Number 1 to 11)
+@for $i from 1 through length($colorList) {
+    .bg-color-#{$i} {
+        background-color: nth($colorList, $i) !important;
+    }
+}
+
+/*--
+    Background Gradient
+------------------------------------------------------*/
+[class*="bg-gradient-"] {
+    background-color: transparent !important;
+}
+
+@for $i from 1 through length($gradientList) {
+    .bg-gradient-#{$i} {
+        background-image: nth($gradientList, $i) !important;
+    }
+}
+
+/*--
+    Overlay
+------------------------------------------------------*/
+.overlay {
+    position: relative;
+    z-index: 1;
+
+    background-color: transparent !important;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        content: "";
+        transition: all 0.3s ease;
+    }
+
+    &-white {
+        &::before {
+            background-color: $white !important;
+        }
+    }
+
+    &-dark {
+        &::before {
+            background-color: $black !important;
+        }
+    }
+
+    &-body {
+        &::before {
+            background-color: $body-color !important;
+        }
+    }
+
+    &-heading {
+        &::before {
+            background-color: $heading-color !important;
+        }
+    }
+
+    &-heading-light {
+        &::before {
+            background-color: $heading-color-light !important;
+        }
+    }
+
+    @for $i from 1 through 20 {
+        &-opacity-#{5 * $i} {
+            &::before {
+                opacity: 0.05 * $i !important;
+
+                filter: alpha(opacity=5 * $i) !important;
+            }
+        }
+    }
+}
+
+// Overlay Color Gray
+@for $i from 1 through length($grayList) {
+    .overlay-gray-#{$i} {
+        &::before {
+            background-color: nth($grayList, $i) !important;
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+// This color is default color. It will change depending your body template color class like .template-color-1 to 11 
+.overlay-color {
+    &::before {
+        background-color: $color-1 !important;
+    }
+}
+
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .overlay-color {
+            &::before {
+                background-color: nth($colorList, $i) !important;
+            }
+        }
+    }
+}
+
+// Overlay Color Template Color (Fixed with a Number 1 to 11)
+@for $i from 1 through length($colorList) {
+    .overlay-color-#{$i} {
+        &::before {
+            background-color: nth($colorList, $i) !important;
+        }
+    }
+}
+
+// Overlay Color Gradient
+@for $i from 1 through length($gradientList) {
+    .overlay-gradient-#{$i} {
+        &::before {
+            background-color: transparent !important;
+            background-image: nth($gradientList, $i) !important;
+            background-image:        -ms-#{nth($gradientList, $i)} !important;
+        }
+    }
+}

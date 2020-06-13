@@ -1,0 +1,170 @@
+// Font Family
+$font-herrVonMuellerhoff: 'Herr Von Muellerhoff', cursive;
+$font-playfair-display: 'Playfair Display', serif;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-source-sans-pro: 'Source Sans Pro', sans-serif;
+$font-poppins: 'Poppins', sans-serif;
+$font-roboto-condensed: 'Roboto Condensed', sans-serif;
+$font-roboto-slab: 'Roboto Slab', serif;
+$font-roboto: 'Roboto', sans-serif;
+$font-merriweather: 'Merriweather', serif;
+$font-mrDafoe: 'Mr Dafoe', cursive;
+$font-nothingYouCouldDo: 'Nothing You Could Do', cursive;
+
+
+// Icon Font
+$fontawesome: 'FontAwesome';
+$optima: 'optima';
+$bicon: 'bicon';
+
+
+// Colors ---------------
+
+$white: #ffffff;
+$black: #000000;
+$dark: #16171c;
+
+// Body Color
+$body-color: #7c7c7c;
+
+// Heading Color
+$heading-color: #232324;
+$heading-color-light: #343538;
+
+// Gray Colors
+$gray-1: #f8f9fa;
+$gray-2: #e9ecef;
+$gray-3: #dee2e6;
+$gray-4: #ced4da;
+$gray-5: #adb5bd;
+$gray-6: #6c757d;
+$gray-7: #495057;
+$gray-8: #343a40;
+$gray-9: #212529;
+// Gray Color List
+$grayList: $gray-1, $gray-2, $gray-3, $gray-4, $gray-5, $gray-6, $gray-7, $gray-8, $gray-9;
+
+// Template Colors
+$color-1:  #526df9;
+$color-2:  #5097f7;
+$color-3:  #5c5df3;
+$color-4:  #3f54c0;
+$color-5:  #e071ed;
+$color-6:  #eede56;
+$color-7:  #dcb86c;
+$color-8:  #71c539;
+$color-9:  #f5b324;
+$color-10: #d9770e;
+$color-11: #ff6577;
+// Template Color List
+$colorList: $color-1, $color-2, $color-3, $color-4, $color-5, $color-6, $color-7, $color-8, $color-9, $color-10, $color-11;
+
+
+// Gradient ---------------
+
+// Gradient
+$gradient-1 : linear-gradient(left, $color-1 0%, $color-5 100%);
+$gradient-2 : linear-gradient(left, $color-6 0%, darken($color-6, 25) 100%);
+$gradient-3 : linear-gradient(left, $color-8 0%, darken($color-8, 25) 100%);
+$gradient-4 : linear-gradient(left, $color-4 0%, $color-2 100%);
+$gradient-5 : linear-gradient(left, $color-9 0%, $color-10 100%);
+$gradient-6 : linear-gradient(left, $color-10 0%, $color-9 100%);
+$gradient-7 : linear-gradient(left, $color-7 0%, $color-6 100%);
+$gradient-8 : linear-gradient(left, $color-2 0%, $color-3 100%);
+$gradient-9 : linear-gradient(left, $color-11 0%, $color-2 100%);
+// Gradient List
+$gradientList: $gradient-1, $gradient-2, $gradient-3, $gradient-4, $gradient-5, $gradient-6, $gradient-7, $gradient-8, $gradient-9;
+
+// Button Gradient
+$btn-gradient-1 : linear-gradient(left, $color-1 0%, $color-5 51%, $color-1 100%);
+$btn-gradient-2 : linear-gradient(left, $color-6 0%, darken($color-6, 25) 51%, $color-6 100%);
+$btn-gradient-3 : linear-gradient(left, $color-8 0%, darken($color-8, 25) 51%, $color-8 100%);
+$btn-gradient-4 : linear-gradient(left, $color-4 0%, $color-2 51%, $color-4 100%);
+$btn-gradient-5 : linear-gradient(left, $color-9 0%, $color-10 151%, $color-9 00%);
+$btn-gradient-6 : linear-gradient(left, $color-10 0%, $color-9 51%, $color-10 100%);
+$btn-gradient-7 : linear-gradient(left, $color-7 0%, $color-6 51%, $color-7 100%);
+$btn-gradient-8 : linear-gradient(left, $color-2 0%, $color-3 51%, $color-2 100%);
+$btn-gradient-9 : linear-gradient(left, $color-11 0%, $color-2 51%, $color-11 100%);
+// Button Gradient List
+$btnGradientList: $btn-gradient-1, $btn-gradient-2, $btn-gradient-3, $btn-gradient-4, $btn-gradient-5, $btn-gradient-6, $btn-gradient-7, $btn-gradient-8, $btn-gradient-9;
+
+
+// Font Weight
+$font-weight-100: 100;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+$font-weight-700: 700;
+$font-weight-800: 800;
+$font-weight-900: 900;
+
+
+// Socail Color
+$android: #7AC157;
+$apple: #B8B8B8;
+$behance: #1869FF;
+$codepen: $black;
+$dribbble: #EA4C8A;
+$dropbox: #007EE5;
+$evernote: #78D525;
+$facebook: #4867AA;
+$github: #313131;
+$google-drive: #1DA462;
+$google-earth: #4285F4;
+$google-glass: #EA4335;
+$google-maps: #5083C3;
+$google-play: #01B9FD;
+$google-plus: #DD5144;
+$google: #4285F4;
+$instagram: #B23A94;
+$css3: #0277BD;
+$html5: #E44D26;
+$javascript: #F9DC3D;
+$python: #0C9DBF;
+$lastfm: #E31B23;
+$linkedin: #007BB6;
+$paypal: #002F86;
+$pinterest: #BD081B;
+$pocket: #EF3E56;
+$polymer: #F87292;
+$rss: #F99C3A;
+$share: #2C9CFF;
+$stackoverflow: #F38024;
+$steam: #15497B;
+$twitter: #1DA1F2;
+$vk: #5181B8;
+$wikipedia: #E9E9E9;
+$windows: #0078D6;
+$s500px: $black;
+$s8tracks: #122D4B;
+$amazon: #F79B34;
+$blogger: #F06A35;
+$delicious: #0000FE;
+$disqus: #2E9EFE;
+$flattr: #7AB831;
+$flickr: #FE0084;
+$odnoklassniki: #F58220;
+$outlook: #0072C6;
+$playstation: #07418E;
+$reddit: #FF4500;
+$skype: #00A9F0;
+$slideshare: #0077B5;
+$soundcloud: #FE4900;
+$tumblr: #36465D;
+$twitch: #6441A4;
+$vimeo: #1AB7EA;
+$whatsapp: #189D0E;
+$xbox: #107C0F;
+$yahoo: #4101AF;
+$youtube: #FE0000;
+
+
+// Responsive Variables
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1499px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile: 'only screen and (max-width: 575px)';
+$extra-small-mobile: 'only screen and (max-width: 479px)';

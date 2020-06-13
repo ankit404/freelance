@@ -1,0 +1,560 @@
+/*--
+    Site Nav
+------------------------------------------*/
+.site-nav {
+    font-family: $font-montserrat;
+    & > ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        & > li {
+            margin: 0 30px;
+            @media #{$laptop-device} {
+                margin: 0 20px;
+            }
+            @media #{$desktop-device} {
+                margin: 0 15px;
+            }
+            & > a {
+                font-size: 14px;
+                line-height: 30px;
+                padding: 5px 0;
+                display: block;
+                text-transform: uppercase;
+                position: relative;
+                color: $heading-color;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 2px;
+                    content: "";
+                    background-color: $color-1;
+                    transform: scaleX(0);
+                    transition: all 0.3s ease 0s;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    left: 0;
+                    height: 0;
+                }
+            }
+            &.menu-item-has-children, &.has-children, &.has-sub-menu {
+                &:hover {
+                    & > a {
+                        &::after {
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                & > a {
+                    color: $color-1;
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
+                
+                & > .sub-menu {
+                    margin-top: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 99;
+                }
+                & > .mega-menu {
+                    visibility: visible;
+                    opacity: 1;
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                    & .sub-menu {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+            &.active {
+                & > a {
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header Transparent*/
+.header-transparent {
+    & .site-nav {
+        & > ul {
+            & > li {
+                & > a {
+                    color: $white;
+                    &::before {
+                        background-color: $white;
+                    }
+                }
+                &:hover {
+                    & > a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header Sticky*/
+.is-sticky {
+    & .site-nav {
+        & > ul {
+            & > li {
+                & > a {
+                    color: $heading-color;
+                    &::before {
+                        background-color: $color-1;
+                    }
+                }
+                &:hover {
+                    & > a {
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+    }
+}
+/*Header Dark*/
+.header-dark {
+    & .site-nav {
+        & > ul {
+            & > li {
+                & > a {
+                    color: $white;
+                    &::before {
+                        background-color: $color-1;
+                    }
+                }
+                &:hover {
+                    & > a {
+                        color: $color-1;
+                    }
+                }
+            }
+        }
+    }
+    &.is-sticky {
+        & .site-nav {
+            & > ul {
+                & > li {
+                    & > a {
+                        color: $white;
+                    }
+                    &:hover {
+                        & > a {
+                            color: $color-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Sub Menu*/
+.sub-menu {
+    margin-top: 20px;
+    margin-left: -25px;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: -99;
+    visibility: hidden;
+    transition: all 0.15s linear 0.1s;
+    opacity: 0;
+    min-width: 220px;
+    padding: 15px 0;
+    box-shadow: 0 2px 12px 2px rgba($black, 0.1);
+    background-color: $white;
+    font-family: $font-source-sans-pro;
+    list-style: none;
+    & li {
+        position: relative;
+        & a {
+            display: block;
+            padding: 10px 25px;
+            color: $body-color;
+            line-height: 28px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        &.menu-item-has-children, &.has-children, &.has-sub-menu {
+            & > a {
+                &::after {
+                    content: "\f105";
+                    display: block;
+                    font-family: $fontawesome;
+                    padding-left: 10px;
+                }
+            }
+        }
+        & .sub-menu {
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            margin-left: -20px;
+            transition: all 250ms ease-out;
+            & li {
+                & .sub-menu {
+                    right: 100%;
+                    left: auto;
+                    margin-left: 0;
+                    margin-right: -20px;
+                }
+            }
+        }
+        &:hover {
+            & > a {
+                color: $heading-color;
+            }
+            & > .sub-menu {
+                visibility: visible;
+                opacity: 1;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+/*Mega Menu*/
+.menu-item-mega-menu {
+    & .mega-menu {
+        max-width: 1170px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        right: 0;
+        padding: 40px 50px;
+        margin-left: 0;
+        margin-right: 0;
+        font-family: $font-source-sans-pro;
+        background-position: right top;
+        & li {
+            flex: 0 0 auto;
+            & a.mc-title {
+                color: $heading-color;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            &.menu-item-has-children, &.has-children, &.has-sub-menu {
+                & > a {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+            &:hover {
+                & .mc-title {
+                    text-decoration: none;
+                }
+                & > a {
+                    text-decoration: underline;
+                }
+            }
+            & .sub-menu{
+                position: static;
+                left: auto;
+                top: auto;
+                right: auto;
+                margin: 0;
+                box-shadow: none;
+                padding: 0;
+                min-width: auto;
+                background-color: transparent;
+            }
+        }
+    }
+    // Mega Menu Column Three
+    &.mega-menu-column-3 {
+        & .mega-menu {
+            max-width: 900px;
+            & > li {
+                flex: 0 0 33.3333%;
+            }
+        }
+    }
+    // Mega Menu Column Four
+    &.mega-menu-column-4 {
+        & .mega-menu {
+            & > li {
+                flex: 0 0 25%;
+            }
+        }
+    }
+    // Mega Menu Column Five
+    &.mega-menu-column-5 {
+        & .mega-menu {
+            & > li {
+                flex: 0 0 20%;
+            }
+        }
+    }
+}
+
+/*Menu Style 2*/
+.site-main-navigation-2 {
+    & .site-nav {
+        & > ul {
+            & > li {
+                margin: 0 !important;
+                & > a {
+                    font-size: 18px;
+                    padding: 5px 30px;
+                    @media #{$laptop-device} {
+                        padding: 5px 20px;
+                    }
+                    @media #{$desktop-device} {
+                        padding: 5px 15px;
+                    }
+                    &::before {
+                        width: auto;
+                        left: 0;
+                        right: 0;
+                        height: 150px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: $color-9;
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                }
+                &:hover {
+                    & > a {
+                        color: $white !important;
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                & .sub-menu {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+.is-sticky {
+    & .site-main-navigation-2 {
+        & .site-nav {
+            & > ul {
+                & > li {
+                    & > a {
+                        &::before {
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Menu Style 3*/
+.site-main-navigation-3 {
+    & .site-nav {
+        & > ul {
+            & > li {
+                margin: 0 15px !important;
+                @media #{$desktop-device} {
+                    margin: 0 1px !important;
+                }
+                & > a {
+                    padding: 5px 15px;
+                    color: $white !important;
+                    &::before {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    & > a {
+                        background-color: $white;
+                        color: $heading-color-light !important;
+                    }
+                }
+                & .sub-menu {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+/*Menu Style 4*/
+.site-main-navigation-4 {
+    & .site-nav {
+        & > ul {
+            & > li {
+                margin: 0 15px;
+                & > a {
+                    padding: 5px 15px;
+                    &::before {
+                        content: "";
+                        border-left: 2px solid;
+                        background-color: transparent;
+                        position: absolute;
+                        left: 0;
+                        height: 12px;
+                        width: 2px;
+                        top: 14px;
+                        transform: rotate(-15deg);
+                    }
+                }
+            }
+        }
+    }
+    @media #{$desktop-device} {
+        & .site-nav {
+            & > ul {
+                & > li {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+/*Menu Style 5*/
+.site-main-navigation-5 {
+    & .site-nav {
+        & > ul {
+            & > li {
+                & > a {
+                    &::before {
+                        top: -35px;
+                    }
+                }
+            }
+        }
+    }
+}
+.is-sticky {
+    & .site-main-navigation-5 {
+        & .site-nav {
+            & > ul {
+                & > li {
+                    & > a {
+                        &::before {
+                            top: -30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .header-transparent {
+            & .site-nav {
+                & > ul {
+                    & > li {
+                        & > a {
+                            color: $white;
+                            &::before {
+                                background-color: $white;
+                            }
+                        }
+                        &:hover {
+                            & > a {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .site-nav {
+            & > ul {
+                & > li {
+                    & > a {
+                        color: $heading-color;
+                        &::before {
+                            background-color: nth($colorList, $i);
+                        }
+                    }
+                    &:hover, &.active {
+                        & > a {
+                            color: nth($colorList, $i);
+                        }
+                    }
+                }
+            }
+        }
+        & .site-main-navigation-2 {
+            & .site-nav {
+                & ul {
+                    & li {
+                        & a {
+                            &::before {
+                                background-color: nth($colorList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .is-sticky {
+            & .site-nav {
+                & > ul {
+                    & > li {
+                        & > a {
+                            color: $heading-color;
+                            &::before {
+                                background-color: nth($colorList, $i);
+                            }
+                        }
+                        &:hover, &.active {
+                            & > a {
+                                color: nth($colorList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .header-dark {
+            & .site-nav {
+                & > ul {
+                    & > li {
+                        & > a {
+                            color: $white;
+                            &::before {
+                                background-color: nth($colorList, $i);
+                            }
+                        }
+                        &:hover {
+                            & > a {
+                                color: nth($colorList, $i);
+                            }
+                        }
+                    }
+                }
+            }
+            &.is-sticky {
+                & .site-nav {
+                    & > ul {
+                        & > li {
+                            &:hover {
+                                & > a {
+                                    color: nth($colorList, $i);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

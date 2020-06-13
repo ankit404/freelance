@@ -1,0 +1,827 @@
+/*--
+    Elements - Teams
+------------------------------------------------------*/
+
+.join-the-team {
+    font-size: 16px;
+    line-height: 1;
+    display: inline-flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 50px;
+    color: $body-color;
+    position: relative;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #d4d4d4;
+        height: 1px;
+        width: 30px;
+    }
+    &::before {
+        left: 0;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+/*-- Team Style 1 --*/
+.uptimo-team {
+    // Team Inner
+    & .team-inner {
+        // Image Wrap
+        & .image-wrap {
+            position: relative;
+            // Image
+            & .image {
+                display: block;
+                position: relative;
+                & .overlay {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.25s ease-out;
+                    opacity: 0;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+            // Social
+            & .social {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                transition: all 0.25s ease-out;
+                display: flex;
+                justify-content: center;
+                opacity: 0;
+                z-index: 9;
+                & a {
+                    padding: 0 10px;
+                    background-color: transparent;
+                    color: $white;
+                    opacity: 0.6;
+                    line-height: 1;
+                    transition: all 0.2s ease;
+                    & i {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        // Content
+        & .content {
+            margin-top: 28px;
+            // Content Inner
+            & .inner {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                @media #{$large-mobile} {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                @media #{$small-mobile} {
+                    flex-direction: row;
+                }
+                @media #{$extra-small-mobile} {
+                    flex-direction: column;
+                }
+                // Title
+                & .title, & .role {
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin: 0;
+                    & a {}
+                }
+                // Role
+                & .role {
+                    &::before {
+                        content: "";
+                        display: block;
+                        float: left;
+                        line-height: 14px;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        margin: 5px 7px;
+                        background-color: $heading-color;
+                        @media #{$large-mobile} {
+                            float: none;
+                            margin: 10px auto;
+                        }
+                        @media #{$small-mobile} {
+                            float: left;
+                            margin: 5px 7px;
+                        }
+                        @media #{$extra-small-mobile} {
+                            float: none;
+                            margin: 10px auto;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Hover
+        &:hover {
+            // Image Wrap
+            & .image-wrap {
+                // Image
+                & .image {
+                    & .overlay {
+                        opacity: 1;
+                    }
+                }
+                // Social
+                & .social {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* --Team Style 2 --*/
+.uptimo-team-2 {
+    // Team Inner
+    & .team-inner {
+        overflow: hidden;
+        position: relative;
+        // Image Wrap
+        & .image-wrap {
+            position: relative;
+            // Image
+            & .image {
+                display: block;
+                position: relative;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        // Content
+        & .content {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 10%;
+            align-items: center;
+            z-index: 1;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+                opacity: 0.8;
+                z-index: -1;
+            }
+            // Content Inner
+            & .inner {
+                width: 100%;
+                position: relative;
+                z-index: 9;
+                // Title
+                & h3.title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin: 0 0 15px;
+                    & a {
+                        color: $white;
+                    }
+                }
+                & h4.title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin: 0 0 15px;
+                    & a {
+                        color: $white;
+                    }
+                }
+                // Role
+                & .role {
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: rgba($white, 0.8);
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+                // Description
+                & .desc {
+                    color: rgba($white, 0.8);
+                    margin-bottom: 30px;
+                    &::before {
+                        content: "";
+                        width: 80px;
+                        display: block;
+                        border-top: 2px solid #fff;
+                        margin-top: 21px;
+                        padding-bottom: 25px;
+                    }
+                }
+                // Social
+                & .social {
+                    & a {
+                        margin-right: 20px;
+                        background-color: transparent;
+                        color: $white;
+                        opacity: 0.6;
+                        line-height: 1;
+                        transition: all 0.2s ease;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        & i {
+                            font-size: 16px;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Team Style 3 --*/
+.uptimo-team-3 {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    // Team Inner
+    & .team-inner {
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #e7e7e7;
+        padding: 40px 5%;
+        box-shadow: 0 0 15px rgba($heading-color-light, 0.05);
+        // Image Wrap
+        & .image-wrap {
+            position: relative;
+            margin-bottom: 25px;
+            // Image
+            & .image {
+                display: block;
+                position: relative;
+                max-width: 160px;
+                border-radius: 50%;
+                margin: auto;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        // Content
+        & .content {
+            // Content Inner
+            & .inner {
+                width: 100%;
+                // Title
+                & h4.title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin: 0 0 8px;
+                    & a {
+                        color: $color-1;
+                        &:hover {
+                            color: $color-1;
+                        }
+                    }
+                }
+                // Role
+                & .role {
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    color: $heading-color-light;
+                }
+                // Description
+                & .desc {
+                    color: rgba($white, 0.8);
+                    margin-bottom: 30px;
+                    &::before {
+                        content: "";
+                        width: 80px;
+                        display: block;
+                        border-top: 2px solid #fff;
+                        margin-top: 21px;
+                        padding-bottom: 25px;
+                    }
+                }
+                // Contact Information
+                & .contact-info {
+                    margin-top: 20px;
+                    & li {
+                        color: $heading-color-light;
+                        & i {
+                            font-size: 14px;
+                            margin-right: 10px;
+                            color: $body-color;
+                        }
+                    }
+                }
+                // Social
+                & .social {
+                    margin: 5px -5px -5px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    & a {
+                        width: 26px;
+                        height: 26px;
+                        margin: 5px;
+                        background-color: transparent;
+                        color: $white;
+                        opacity: 0.85;
+                        border-radius: 50%;
+                        line-height: 1;
+                        transition: all 0.2s ease;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        & i {
+                            font-size: 12px;
+                            line-height: 27px;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                        
+                        &.facebook {
+                            background-color: $facebook;
+                        }
+                        &.twitter {
+                            background-color: $twitter;
+                        }
+                        &.linkedin {
+                            background-color: $linkedin;
+                        }
+                        &.youtube {
+                            background-color: $youtube;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .team-inner {
+                & .content {
+                    & .inner {
+                        & h4.title {
+                            & a {
+                                color: nth($colorList, $i);
+                                &:hover {
+                                    color: nth($colorList, $i);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Team Style 4 --*/
+.uptimo-team-4 {
+    // Team Inner
+    & .team-inner {
+        overflow: hidden;
+        position: relative;
+        // Image Wrap
+        & .image-wrap {
+            position: relative;
+            margin-bottom: 50px;
+            // Image
+            & .image {
+                display: block;
+                position: relative;
+                margin: auto;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        // Content
+        & .content {
+            // Content Inner
+            & .inner {
+                width: 100%;
+                // Title
+                & .title {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin: 0 0 8px;
+                    & a {
+                        color: $color-4;
+                    }
+                }
+                // Role
+                & .role {
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+                // Description
+                & .desc {
+                    color: rgba($white, 0.8);
+                    margin-bottom: 30px;
+                    &::before {
+                        content: "";
+                        width: 80px;
+                        display: block;
+                        border-top: 2px solid #fff;
+                        margin-top: 21px;
+                        padding-bottom: 25px;
+                    }
+                }
+                // Content
+                & p {
+                    margin-top: 20px;
+                }
+                // Social
+                & .social {
+                    margin: 5px -5px -5px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    & a {
+                        width: 26px;
+                        height: 26px;
+                        margin: 5px;
+                        background-color: transparent;
+                        color: $white;
+                        opacity: 0.85;
+                        border-radius: 50%;
+                        line-height: 1;
+                        transition: all 0.2s ease;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        & i {
+                            font-size: 12px;
+                            line-height: 27px;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                        
+                        &.facebook {
+                            background-color: $facebook;
+                        }
+                        &.twitter {
+                            background-color: $twitter;
+                        }
+                        &.linkedin {
+                            background-color: $linkedin;
+                        }
+                        &.youtube {
+                            background-color: $youtube;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @for $i from 1 through length($colorList) {
+        &.color-#{$i} {
+            & .team-inner {
+                & .content {
+                    & .inner {
+                        & .title {
+                            & a {
+                                color: nth($colorList, $i);
+                                &:hover {
+                                    color: nth($colorList, $i);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*-- Team Style 5 --*/
+.uptimo-team-5 {
+    & .image {
+        display: block;
+        margin-bottom: 20px;
+        & img {
+            width: 100%;
+            filter: grayscale(100%);
+            border: 1px solid transparent;
+        }
+    }
+    & .info {
+        text-align: center;
+        & .title {
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        & .role {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        & p {
+            margin-bottom: 15px;
+        }
+        & .social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -5px;
+            & a {
+                width: 28px;
+                height: 28px;
+                text-align: center;
+                color: $heading-color;
+                line-height: 1;
+                border-radius: 50%;
+                margin: 5px;
+                & i {
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+                &:hover {
+                    background-color: $heading-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &:hover {
+        & .image {
+            & img {
+                border-color: $color-1;
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+
+/*-- Team Style 6 --*/
+.uptimo-team-6 {
+    text-align: center;
+    & .inner {
+        & .image {
+            max-width: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            margin-bottom: 25px;
+            &::before {
+                opacity: 0;
+                border-radius: 50%;
+                z-index: 3;
+                transition: all 0.3s ease 0s;
+            }
+            & img {
+                width: 100%;
+            }
+            & .social {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 15px;
+                display: flex;
+                justify-content: center;
+                z-index: 9;
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+                & a {
+                    color: $white;
+                    line-height: 1;
+                    margin: 0 3px;
+                    padding: 0 3px;
+                    & i {
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+        & .content {
+            & .title {
+                font-weight: 700;
+                color: $heading-color;
+            }
+            & .role {
+                margin: 0;
+            }
+            & .star {
+                line-height: 1;
+                margin-bottom: 10px;
+                & i {
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+            & .excerpt {}
+        }
+        &:hover {
+            & .image {
+                &::before {
+                    opacity: 0.8;
+                }
+                & .social {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/*-- Team Style 7 --*/
+.uptimo-team-7 {
+    & .inner {
+        & .image {
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 25px;
+            &::before {
+                content: "";
+                background-color: $heading-color-light;
+                visibility: hidden;
+                opacity: 0;
+                z-index: 3;
+                transition: all 0.3s ease 0s;
+                z-index: 3;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+            }
+            & img {
+                width: 100%;
+            }
+            & .social {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: $white;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                opacity: 0;
+                z-index: 9;
+                transition: all 0.3s ease 0s;
+                & a {
+                    margin: 0 10px;
+                    & i {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        & .content {
+            & .name {
+                margin-bottom: 10px;
+            }
+            & .role {
+                margin: 0;
+            }
+            & .star {
+                line-height: 1;
+                margin-bottom: 10px;
+                & i {
+                    font-size: 12px;
+                    line-height: 1;
+                }
+            }
+            & .excerpt {
+                padding: 0 10px;
+            }
+        }
+        &:hover {
+            & .image {
+                &::before {
+                    opacity: 0.8;
+                    visibility: visible;
+                }
+                & .social {
+                    opacity: 1;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+/*-- Team Style 8 --*/
+.uptimo-team-8 {
+    & .inner {
+        position: relative;
+        & .image {
+            & img {
+                width: 100%;
+                filter: grayscale(100%);
+            }
+        }
+        & .content {
+            padding: 20px 30px 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            & .name {
+                margin-bottom: 3px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            & .role {
+                font-size: 14px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            & .social {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                z-index: 9;
+                transition: all 0.3s ease 0s;
+                & a {
+                    margin: 0 13px;
+                    color: $heading-color;
+                    &:hover {
+                        color: $white;
+                    }
+                    & i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        &:hover {
+            & .image {
+                & img {
+                    filter: grayscale(0);
+                }
+            }
+            & .content {
+                & .social {
+                    opacity: 1;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .uptimo-team-5 {
+            &:hover {
+                & .image {
+                    & img {
+                        border-color: nth($colorList, $i);
+                    }
+                }
+            }
+        }
+    }
+}

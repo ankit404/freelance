@@ -1,0 +1,173 @@
+/*--
+    Elements - BlockQuote
+------------------------------------------------------*/
+
+/*Blockquote 1*/
+.blockquote {
+    margin-bottom: 0;
+    & p {
+        line-height: 1.5;
+        font-family: $font-playfair-display;
+        color: $heading-color-light;
+        margin-bottom: 30px;
+    }
+    & h6 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+/*Blockquote 2*/
+.blockquote-2 {
+    margin-bottom: 0;
+    & p {
+        font-size: 18px;
+        line-height: 31px;
+        font-style: italic;
+        color: $heading-color;
+        margin: 0 !important;
+    }
+    & h6 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+/*Blockquote 3*/
+.blockquote-3 {
+    text-align: center;
+    max-width: 550px;
+    margin: auto;
+    &::before {
+        content: '“';
+        color: $heading-color;
+        font-size: 80px;
+        line-height: 0;
+        font-family: $font-playfair-display;
+        display: block;
+        padding-top: 25px;
+        margin-bottom: 5px;
+    }
+    & p {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: $font-playfair-display;
+        color: $heading-color;
+        margin: 0 !important;
+    }
+    & h6 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+/*Blockquote 4*/
+.blockquote-4 {
+    text-align: center;
+    margin: auto;
+    & p {
+        font-size: 30px;
+        line-height: 1.2;
+        font-family: $font-playfair-display;
+        color: $heading-color;
+        margin: 0 !important;
+    }
+    & h6 {
+        margin: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &.white {
+        & p, & h6 {
+            color: $white;
+        }
+    }
+}
+
+/*Blockquote 5*/
+.blockquote-5 {
+    position: relative;
+    border: 1px solid $gray-2;
+    padding: 35px 50px 35px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    @media #{$small-mobile} {
+        padding: 30px;
+        padding-left: 110px;
+        &::before {
+            left: 25px !important;
+            top: 30px;
+        }
+    }
+    &::before {
+        display: block;
+        float: left;
+        content: '“';
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+        background: $color-1;
+        color: $white;
+        text-align: center;
+        line-height: 85px;
+        font-family: serif;
+        font-weight: 400;
+        border-radius: 50%;
+        position: absolute;
+        top: 35px;
+        left: 50px;
+    }
+    & p {
+        font-size: 24px;
+        line-height: 1.35;
+        font-family: $font-playfair-display;
+        color: $heading-color;
+        margin: 0 !important;
+    }
+}
+
+/*Blockquote 6*/
+.blockquote-6 {
+    text-align: center;
+    & p {
+        color: $heading-color;
+        font-size: 36px;
+        line-height: 46px;
+        font-family: $font-playfair-display !important;
+    }
+    &.white {
+        & p {
+            color: $white;
+        }
+    }
+    @media #{$tablet-device} {
+        & p {
+            font-size: 26px;
+            line-height: 36px;
+        }
+    }
+    @media #{$large-mobile} {
+        & p {
+            font-size: 26px;
+            line-height: 36px;
+        }
+    }
+}
+
+/*Teplate Color Loop - Color Depend on Body class*/
+@for $i from 1 through length($colorList) {
+    body.template-color-#{$i} {
+        & .blockquote-5 {
+            &::before {
+                background-color: nth($colorList, $i);
+            }
+        }
+    }
+}

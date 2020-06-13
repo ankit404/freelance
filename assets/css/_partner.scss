@@ -1,0 +1,60 @@
+/*--
+    Elements - Partner
+------------------------------------------------------*/
+.partner-slider {
+    & .slick-track {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+/*Partner*/
+.partner {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    // Partner Inner
+    & .partner-inner {
+        text-align: center;
+        // Image
+        & img {
+            max-width: 100%;
+        }
+    }
+    
+    @media #{$large-mobile} {
+        & .partner-inner {
+            & img {
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+    &.partner-2 {
+        // Partner Inner
+        & .partner-inner {
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+            // Image
+            & img {
+                max-width: 100%;
+                width: auto;
+            }
+        }
+    }
+    &.partner-3 {
+        & .partner-inner {
+            & img {
+                filter: grayscale(100%);
+            }
+            &:hover {
+                & img {
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+}
