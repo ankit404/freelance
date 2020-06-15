@@ -10,3 +10,6 @@ a landing page for freelanceit
   <li>Most visited</li>
   <li>Polls</li>
 </ul>
+<hr>
+<h4>With Different <i>categories</i> on Site</h4>
+<p>And all the categories have the number of <mark>qustions asked</mark> and <mark>followers</mark></p>
