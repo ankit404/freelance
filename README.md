@@ -7,6 +7,7 @@ a landing page for freelanceit
   <li>Home</li>
   <li>Recent Questions</li>
   <li>Most Answered</li>
+  <li>Not Answered</li>
   <li>Most visited</li>
   <li>Polls</li>
 </ul>
